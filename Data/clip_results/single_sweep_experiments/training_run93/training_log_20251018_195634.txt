@@ -1,0 +1,1811 @@
+2025-10-18 19:56:34 - INFO - ================================================================================
+2025-10-18 19:56:34 - INFO - Starting Training Run
+2025-10-18 19:56:34 - INFO - Log file: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/training_log_20251018_195634.txt
+2025-10-18 19:56:34 - INFO - ================================================================================
+2025-10-18 19:56:35 - INFO - Loaded dataset split indices from: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior/training_artifacts/random_states/random_states_20251013_220330/dataset_split_indices.pth
+2025-10-18 19:56:35 - INFO -   Train samples: 1444
+2025-10-18 19:56:35 - INFO -   Test samples: 362
+2025-10-18 19:56:35 - INFO -   Random seed used: 1
+2025-10-18 19:56:35 - INFO - Using baseline dataset split
+2025-10-18 19:56:35 - INFO - pos_embedding is True
+2025-10-18 19:56:39 - INFO - Loaded DoRA parameters from /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior/training_artifacts/dora_params/dora_params_20251013_220330/epoch92_dora_params.pth
+2025-10-18 19:56:39 - INFO - Resuming from epoch 92
+2025-10-18 19:56:39 - INFO - Restored optimizer state from epoch 92
+2025-10-18 19:56:39 - INFO - Restored DataLoader generator state from epoch 92
+2025-10-18 19:56:39 - INFO - Random states loaded from: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior/training_artifacts/random_states/random_states_20251013_220330/epoch92_random_states.pth
+2025-10-18 19:56:39 - INFO - Successfully restored all random states from baseline epoch 92
+2025-10-18 19:56:39 - INFO - 
+Model Configuration:
+2025-10-18 19:56:39 - INFO - -------------------
+2025-10-18 19:56:39 - INFO - csv_file: ../Data/spose_embedding66d_rescaled_1806train.csv
+2025-10-18 19:56:39 - INFO - img_dir: ../Data/Things1854
+2025-10-18 19:56:39 - INFO - inference_csv_file: ../Data/spose_embedding66d_rescaled_48val_reordered.csv
+2025-10-18 19:56:39 - INFO - RDM48_triplet_dir: ../Data/RDM48_triplet.mat
+2025-10-18 19:56:39 - INFO - backbone: ViT-L/14
+2025-10-18 19:56:39 - INFO - epochs: 500
+2025-10-18 19:56:39 - INFO - batch_size: 64
+2025-10-18 19:56:39 - INFO - train_portion: 0.8
+2025-10-18 19:56:39 - INFO - lr: 0.0003
+2025-10-18 19:56:39 - INFO - logger: None
+2025-10-18 19:56:39 - INFO - early_stopping_patience: 10
+2025-10-18 19:56:39 - INFO - random_seed: 1
+2025-10-18 19:56:39 - INFO - vision_layers: 2
+2025-10-18 19:56:39 - INFO - transformer_layers: 1
+2025-10-18 19:56:39 - INFO - rank: 32
+2025-10-18 19:56:39 - INFO - criterion: MSELoss()
+2025-10-18 19:56:39 - INFO - cuda: 1
+2025-10-18 19:56:39 - INFO - baseline_dora_directory: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior/training_artifacts/dora_params/dora_params_20251013_220330
+2025-10-18 19:56:39 - INFO - baseline_random_state_path: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior/training_artifacts/random_states/random_states_20251013_220330
+2025-10-18 19:56:39 - INFO - baseline_split_indices_path: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior/training_artifacts/random_states/random_states_20251013_220330/dataset_split_indices.pth
+2025-10-18 19:56:39 - INFO - perturb_type: random_target
+2025-10-18 19:56:39 - INFO - perturb_distribution: target
+2025-10-18 19:56:39 - INFO - perturb_seed: 42
+2025-10-18 19:56:39 - INFO - output_base_directory: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025
+2025-10-18 19:56:39 - INFO - training_run: 93
+2025-10-18 19:56:39 - INFO - checkpoint_path: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/model_checkpoint_run93.pth
+2025-10-18 19:56:39 - INFO - training_res_path: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/training_res_run93.csv
+2025-10-18 19:56:39 - INFO - dora_parameters_path: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/dora_params_run93
+2025-10-18 19:56:39 - INFO - random_state_path: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93
+2025-10-18 19:56:39 - INFO - resume_from_epoch: 92
+2025-10-18 19:56:39 - INFO - 
+Updating layers:
+2025-10-18 19:56:39 - INFO - clip_model.visual.transformer.resblocks.22.attn.out_proj.m
+2025-10-18 19:56:39 - INFO - clip_model.visual.transformer.resblocks.22.attn.out_proj.delta_D_A
+2025-10-18 19:56:39 - INFO - clip_model.visual.transformer.resblocks.22.attn.out_proj.delta_D_B
+2025-10-18 19:56:39 - INFO - clip_model.visual.transformer.resblocks.23.attn.out_proj.m
+2025-10-18 19:56:39 - INFO - clip_model.visual.transformer.resblocks.23.attn.out_proj.delta_D_A
+2025-10-18 19:56:39 - INFO - clip_model.visual.transformer.resblocks.23.attn.out_proj.delta_D_B
+2025-10-18 19:56:39 - INFO - clip_model.transformer.resblocks.11.attn.out_proj.m
+2025-10-18 19:56:39 - INFO - clip_model.transformer.resblocks.11.attn.out_proj.delta_D_A
+2025-10-18 19:56:39 - INFO - clip_model.transformer.resblocks.11.attn.out_proj.delta_D_B
+2025-10-18 19:56:39 - INFO - 
+Number of trainable parameters: 183040
+
+2025-10-18 19:56:39 - INFO - *********************************
+2025-10-18 19:56:39 - INFO - Evaluating initial model
+2025-10-18 19:56:39 - INFO - *********************************
+
+2025-10-18 19:56:40 - INFO - 
+*** USING RANDOM TARGETS FOR EPOCH 93 ***
+2025-10-18 19:56:40 - INFO - Random target seed: 42
+2025-10-18 19:56:40 - INFO - Random targets stats: min=-34.406120, max=41.057232, mean=5.474980
+2025-10-18 19:56:41 - INFO - Predictions stats: min=-6.769905, max=86.584732, mean=5.355508
+2025-10-18 19:56:41 - INFO - Loss value: 190.88616943359375
+2025-10-18 19:56:42 - INFO - Random targets stats: min=-36.011776, max=44.407051, mean=5.635376
+2025-10-18 19:56:43 - INFO - Predictions stats: min=-8.564964, max=81.746254, mean=6.689269
+2025-10-18 19:56:43 - INFO - Loss value: 182.93832397460938
+2025-10-18 19:56:43 - INFO - Random targets stats: min=-34.927681, max=42.155464, mean=5.686240
+2025-10-18 19:56:44 - INFO - Predictions stats: min=-10.261148, max=79.113838, mean=6.968108
+2025-10-18 19:56:44 - INFO - Loss value: 175.109375
+2025-10-18 19:56:44 - INFO - Random targets stats: min=-31.451422, max=45.020737, mean=5.635951
+2025-10-18 19:56:45 - INFO - Predictions stats: min=-12.087814, max=74.398026, mean=6.191647
+2025-10-18 19:56:45 - INFO - Loss value: 168.10279846191406
+2025-10-18 19:56:46 - INFO - Random targets stats: min=-36.132595, max=45.241825, mean=5.479996
+2025-10-18 19:56:47 - INFO - Predictions stats: min=-14.119586, max=72.599068, mean=5.695427
+2025-10-18 19:56:47 - INFO - Loss value: 157.23426818847656
+2025-10-18 19:56:47 - INFO - Random targets stats: min=-33.848343, max=43.249393, mean=5.698541
+2025-10-18 19:56:48 - INFO - Predictions stats: min=-19.521490, max=66.234398, mean=5.148571
+2025-10-18 19:56:48 - INFO - Loss value: 159.45016479492188
+2025-10-18 19:56:49 - INFO - Random targets stats: min=-34.673565, max=49.572243, mean=5.913595
+2025-10-18 19:56:50 - INFO - Predictions stats: min=-20.917267, max=57.551090, mean=5.573029
+2025-10-18 19:56:50 - INFO - Loss value: 147.4117431640625
+2025-10-18 19:56:50 - INFO - Random targets stats: min=-31.708239, max=46.563473, mean=5.911491
+2025-10-18 19:56:51 - INFO - Predictions stats: min=-21.957230, max=53.303909, mean=6.248360
+2025-10-18 19:56:51 - INFO - Loss value: 139.58306884765625
+2025-10-18 19:56:52 - INFO - Random targets stats: min=-33.330181, max=48.362259, mean=5.695247
+2025-10-18 19:56:53 - INFO - Predictions stats: min=-18.160421, max=45.111938, mean=6.573731
+2025-10-18 19:56:53 - INFO - Loss value: 136.96682739257812
+2025-10-18 19:56:53 - INFO - Random targets stats: min=-29.294859, max=38.159199, mean=5.772856
+2025-10-18 19:56:54 - INFO - Predictions stats: min=-17.392761, max=45.017265, mean=6.115919
+2025-10-18 19:56:54 - INFO - Loss value: 126.15857696533203
+2025-10-18 19:56:55 - INFO - Random targets stats: min=-30.183252, max=41.037865, mean=6.074000
+2025-10-18 19:56:56 - INFO - Predictions stats: min=-14.614429, max=35.631580, mean=5.681641
+2025-10-18 19:56:56 - INFO - Loss value: 124.08164978027344
+2025-10-18 19:56:56 - INFO - Random targets stats: min=-30.361364, max=41.846073, mean=5.739674
+2025-10-18 19:56:57 - INFO - Predictions stats: min=-11.805828, max=35.257580, mean=5.205453
+2025-10-18 19:56:57 - INFO - Loss value: 120.88142395019531
+2025-10-18 19:56:58 - INFO - Random targets stats: min=-38.807354, max=40.853260, mean=5.712509
+2025-10-18 19:56:59 - INFO - Predictions stats: min=-6.261457, max=28.843790, mean=5.069042
+2025-10-18 19:56:59 - INFO - Loss value: 115.43976593017578
+2025-10-18 19:56:59 - INFO - Random targets stats: min=-26.231327, max=48.426090, mean=5.698665
+2025-10-18 19:57:00 - INFO - Predictions stats: min=-4.925443, max=25.804502, mean=5.125563
+2025-10-18 19:57:00 - INFO - Loss value: 110.15934753417969
+2025-10-18 19:57:01 - INFO - Random targets stats: min=-33.670727, max=38.614567, mean=5.535622
+2025-10-18 19:57:02 - INFO - Predictions stats: min=-2.647627, max=23.761019, mean=5.304966
+2025-10-18 19:57:02 - INFO - Loss value: 110.23411560058594
+2025-10-18 19:57:02 - INFO - Random targets stats: min=-32.859570, max=49.826836, mean=6.000076
+2025-10-18 19:57:03 - INFO - Predictions stats: min=-1.883190, max=19.840141, mean=5.649402
+2025-10-18 19:57:03 - INFO - Loss value: 104.49465942382812
+2025-10-18 19:57:03 - INFO - Random targets stats: min=-36.838009, max=39.203888, mean=5.632089
+2025-10-18 19:57:04 - INFO - Predictions stats: min=-0.293428, max=19.014482, mean=5.756050
+2025-10-18 19:57:04 - INFO - Loss value: 106.98890686035156
+2025-10-18 19:57:05 - INFO - Random targets stats: min=-32.156944, max=48.676350, mean=5.887350
+2025-10-18 19:57:06 - INFO - Predictions stats: min=0.280303, max=17.684566, mean=5.846849
+2025-10-18 19:57:06 - INFO - Loss value: 105.79488372802734
+2025-10-18 19:57:06 - INFO - Random targets stats: min=-31.570032, max=40.557945, mean=5.237001
+2025-10-18 19:57:07 - INFO - Predictions stats: min=0.646763, max=18.094740, mean=6.074740
+2025-10-18 19:57:07 - INFO - Loss value: 110.00117492675781
+2025-10-18 19:57:08 - INFO - Random targets stats: min=-29.132788, max=44.159256, mean=5.880362
+2025-10-18 19:57:09 - INFO - Predictions stats: min=0.988221, max=15.293245, mean=5.665641
+2025-10-18 19:57:09 - INFO - Loss value: 103.03762817382812
+2025-10-18 19:57:09 - INFO - Random targets stats: min=-29.061987, max=41.515568, mean=5.512527
+2025-10-18 19:57:10 - INFO - Predictions stats: min=0.891718, max=14.252931, mean=5.478549
+2025-10-18 19:57:10 - INFO - Loss value: 106.96574401855469
+2025-10-18 19:57:11 - INFO - Random targets stats: min=-25.275389, max=43.328274, mean=5.604405
+2025-10-18 19:57:12 - INFO - Predictions stats: min=1.108197, max=15.601593, mean=5.338097
+2025-10-18 19:57:12 - INFO - Loss value: 102.5641098022461
+2025-10-18 19:57:12 - INFO - Random targets stats: min=-37.060883, max=41.671459, mean=5.316066
+2025-10-18 19:57:13 - INFO - Predictions stats: min=1.387856, max=12.467515, mean=5.094800
+2025-10-18 19:57:13 - INFO - Loss value: 102.72744750976562
+2025-10-18 19:57:21 - INFO - Epoch 93: Training Loss: 131.2917, Validation Loss: 93.2943
+2025-10-18 19:57:22 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 19:57:22 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 19:57:22 - INFO - RDM shape: (48, 48)
+
+2025-10-18 19:57:22 - INFO - First 5x5 of the RDM:
+2025-10-18 19:57:22 - INFO - [[0.         0.63471556 0.54922755 0.65837291 0.76487694]
+ [0.63471556 0.         0.45743634 0.30952431 0.53085423]
+ [0.54922755 0.45743634 0.         0.5903548  0.59028024]
+ [0.65837291 0.30952431 0.5903548  0.         0.73435806]
+ [0.76487694 0.53085423 0.59028024 0.73435806 0.        ]]
+2025-10-18 19:57:22 - INFO - 
+
+2025-10-18 19:57:22 - INFO - First 5x5 of the reference RDM:
+2025-10-18 19:57:22 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 19:57:22 - INFO - 
+
+2025-10-18 19:57:22 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 19:57:22 - INFO - First 5 model rdm values: [0.63471556 0.54922755 0.65837291 0.76487694 0.65482252]
+
+2025-10-18 19:57:22 - INFO - Behavioral RSA Correlation & p-value: 0.3920, 0.0000
+2025-10-18 19:57:22 - INFO - *** RANDOM TARGETS WERE USED IN THIS EPOCH ***
+2025-10-18 19:57:22 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 19:57:22 - INFO -   m: shape torch.Size([1024])
+2025-10-18 19:57:22 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 19:57:22 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 19:57:22 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 19:57:22 - INFO -   m: shape torch.Size([1024])
+2025-10-18 19:57:22 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 19:57:22 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 19:57:22 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 19:57:22 - INFO -   m: shape torch.Size([768])
+2025-10-18 19:57:22 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 19:57:22 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 19:57:23 - INFO - DoRA parameters saved for epoch 93
+2025-10-18 19:57:23 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch93_random_states.pth
+2025-10-18 19:57:24 - INFO - Predictions stats: min=1.560057, max=13.701518, mean=5.138875
+2025-10-18 19:57:24 - INFO - Loss value: 95.14913177490234
+2025-10-18 19:57:26 - INFO - Predictions stats: min=1.812591, max=12.404409, mean=5.318310
+2025-10-18 19:57:26 - INFO - Loss value: 93.51980590820312
+2025-10-18 19:57:27 - INFO - Predictions stats: min=1.000532, max=12.141706, mean=5.422915
+2025-10-18 19:57:27 - INFO - Loss value: 89.37113952636719
+2025-10-18 19:57:29 - INFO - Predictions stats: min=1.528339, max=13.419628, mean=5.743903
+2025-10-18 19:57:29 - INFO - Loss value: 88.68975830078125
+2025-10-18 19:57:30 - INFO - Predictions stats: min=0.561386, max=13.679682, mean=5.851704
+2025-10-18 19:57:30 - INFO - Loss value: 89.68170166015625
+2025-10-18 19:57:32 - INFO - Predictions stats: min=0.795541, max=15.310467, mean=6.144309
+2025-10-18 19:57:32 - INFO - Loss value: 84.41048431396484
+2025-10-18 19:57:33 - INFO - Predictions stats: min=-0.191433, max=16.887642, mean=6.109154
+2025-10-18 19:57:33 - INFO - Loss value: 88.20339965820312
+2025-10-18 19:57:35 - INFO - Predictions stats: min=-0.383760, max=19.668861, mean=6.292049
+2025-10-18 19:57:35 - INFO - Loss value: 85.72511291503906
+2025-10-18 19:57:36 - INFO - Predictions stats: min=-0.651969, max=21.655376, mean=6.129910
+2025-10-18 19:57:36 - INFO - Loss value: 83.85919189453125
+2025-10-18 19:57:38 - INFO - Predictions stats: min=-0.906937, max=21.150051, mean=5.962215
+2025-10-18 19:57:38 - INFO - Loss value: 81.35807800292969
+2025-10-18 19:57:39 - INFO - Predictions stats: min=-1.205076, max=21.473429, mean=5.734188
+2025-10-18 19:57:39 - INFO - Loss value: 82.4604263305664
+2025-10-18 19:57:40 - INFO - Predictions stats: min=-1.614797, max=23.432325, mean=5.710170
+2025-10-18 19:57:40 - INFO - Loss value: 82.17961883544922
+2025-10-18 19:57:42 - INFO - Predictions stats: min=-1.664642, max=26.989084, mean=5.498688
+2025-10-18 19:57:42 - INFO - Loss value: 82.1230697631836
+2025-10-18 19:57:43 - INFO - Predictions stats: min=-1.212287, max=27.073250, mean=5.449193
+2025-10-18 19:57:43 - INFO - Loss value: 84.06330871582031
+2025-10-18 19:57:45 - INFO - Predictions stats: min=-0.352875, max=28.329254, mean=5.587845
+2025-10-18 19:57:45 - INFO - Loss value: 78.61679077148438
+2025-10-18 19:57:46 - INFO - Predictions stats: min=-0.136383, max=30.895779, mean=5.848030
+2025-10-18 19:57:46 - INFO - Loss value: 76.96862030029297
+2025-10-18 19:57:48 - INFO - Predictions stats: min=0.348607, max=30.527618, mean=6.071616
+2025-10-18 19:57:48 - INFO - Loss value: 78.3882064819336
+2025-10-18 19:57:49 - INFO - Predictions stats: min=0.319119, max=31.535097, mean=6.264561
+2025-10-18 19:57:49 - INFO - Loss value: 76.45706176757812
+2025-10-18 19:57:51 - INFO - Predictions stats: min=0.454583, max=34.612213, mean=6.389934
+2025-10-18 19:57:51 - INFO - Loss value: 72.17735290527344
+2025-10-18 19:57:52 - INFO - Predictions stats: min=-0.360887, max=33.920063, mean=6.214408
+2025-10-18 19:57:52 - INFO - Loss value: 76.67152404785156
+2025-10-18 19:57:54 - INFO - Predictions stats: min=-0.207402, max=35.715046, mean=6.045162
+2025-10-18 19:57:54 - INFO - Loss value: 71.79058837890625
+2025-10-18 19:57:55 - INFO - Predictions stats: min=-0.500405, max=35.599789, mean=5.664149
+2025-10-18 19:57:55 - INFO - Loss value: 70.50337219238281
+2025-10-18 19:57:56 - INFO - Predictions stats: min=-1.120649, max=33.488293, mean=5.580845
+2025-10-18 19:57:56 - INFO - Loss value: 72.14495849609375
+2025-10-18 19:58:04 - INFO - Epoch 94: Training Loss: 82.1252, Validation Loss: 69.4180
+2025-10-18 19:58:05 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 19:58:05 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 19:58:05 - INFO - RDM shape: (48, 48)
+
+2025-10-18 19:58:05 - INFO - First 5x5 of the RDM:
+2025-10-18 19:58:05 - INFO - [[0.         0.22621378 0.13512484 0.25353657 0.23940581]
+ [0.22621378 0.         0.17193346 0.11919021 0.20363738]
+ [0.13512484 0.17193346 0.         0.232519   0.20297613]
+ [0.25353657 0.11919021 0.232519   0.         0.29478013]
+ [0.23940581 0.20363738 0.20297613 0.29478013 0.        ]]
+2025-10-18 19:58:05 - INFO - 
+
+2025-10-18 19:58:05 - INFO - First 5x5 of the reference RDM:
+2025-10-18 19:58:05 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 19:58:05 - INFO - 
+
+2025-10-18 19:58:05 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 19:58:05 - INFO - First 5 model rdm values: [0.22621378 0.13512484 0.25353657 0.23940581 0.19582883]
+
+2025-10-18 19:58:05 - INFO - Behavioral RSA Correlation & p-value: 0.4168, 0.0000
+2025-10-18 19:58:06 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 19:58:06 - INFO -   m: shape torch.Size([1024])
+2025-10-18 19:58:06 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 19:58:06 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 19:58:06 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 19:58:06 - INFO -   m: shape torch.Size([1024])
+2025-10-18 19:58:06 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 19:58:06 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 19:58:06 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 19:58:06 - INFO -   m: shape torch.Size([768])
+2025-10-18 19:58:06 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 19:58:06 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 19:58:06 - INFO - DoRA parameters saved for epoch 94
+2025-10-18 19:58:07 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch94_random_states.pth
+2025-10-18 19:58:08 - INFO - Predictions stats: min=-1.296985, max=37.265442, mean=5.500841
+2025-10-18 19:58:08 - INFO - Loss value: 66.66202545166016
+2025-10-18 19:58:09 - INFO - Predictions stats: min=-1.037720, max=34.292564, mean=5.692507
+2025-10-18 19:58:09 - INFO - Loss value: 64.50044250488281
+2025-10-18 19:58:11 - INFO - Predictions stats: min=-1.128800, max=35.603718, mean=5.848932
+2025-10-18 19:58:11 - INFO - Loss value: 60.46330642700195
+2025-10-18 19:58:12 - INFO - Predictions stats: min=-1.012810, max=35.937347, mean=5.963154
+2025-10-18 19:58:12 - INFO - Loss value: 60.134029388427734
+2025-10-18 19:58:14 - INFO - Predictions stats: min=-2.877050, max=37.710339, mean=6.016063
+2025-10-18 19:58:14 - INFO - Loss value: 61.09147262573242
+2025-10-18 19:58:15 - INFO - Predictions stats: min=-2.162431, max=38.387817, mean=6.203966
+2025-10-18 19:58:15 - INFO - Loss value: 54.305110931396484
+2025-10-18 19:58:17 - INFO - Predictions stats: min=-1.528343, max=36.610325, mean=6.613226
+2025-10-18 19:58:17 - INFO - Loss value: 50.74161148071289
+2025-10-18 19:58:18 - INFO - Predictions stats: min=-3.481159, max=41.350216, mean=6.160650
+2025-10-18 19:58:18 - INFO - Loss value: 50.64197540283203
+2025-10-18 19:58:20 - INFO - Predictions stats: min=-2.582416, max=37.581165, mean=5.816357
+2025-10-18 19:58:20 - INFO - Loss value: 52.017845153808594
+2025-10-18 19:58:21 - INFO - Predictions stats: min=-3.095026, max=39.623459, mean=5.399857
+2025-10-18 19:58:21 - INFO - Loss value: 48.42654800415039
+2025-10-18 19:58:23 - INFO - Predictions stats: min=-2.084676, max=35.261818, mean=5.494440
+2025-10-18 19:58:23 - INFO - Loss value: 50.0955696105957
+2025-10-18 19:58:24 - INFO - Predictions stats: min=-3.522605, max=36.441566, mean=5.121382
+2025-10-18 19:58:24 - INFO - Loss value: 46.672462463378906
+2025-10-18 19:58:26 - INFO - Predictions stats: min=-3.820450, max=35.706676, mean=5.202047
+2025-10-18 19:58:26 - INFO - Loss value: 46.85955047607422
+2025-10-18 19:58:27 - INFO - Predictions stats: min=-3.920679, max=38.571049, mean=5.344216
+2025-10-18 19:58:27 - INFO - Loss value: 46.13841247558594
+2025-10-18 19:58:29 - INFO - Predictions stats: min=-3.934353, max=38.356560, mean=5.734725
+2025-10-18 19:58:29 - INFO - Loss value: 43.590980529785156
+2025-10-18 19:58:30 - INFO - Predictions stats: min=-2.964174, max=39.269772, mean=5.398761
+2025-10-18 19:58:30 - INFO - Loss value: 44.09663009643555
+2025-10-18 19:58:31 - INFO - Predictions stats: min=-3.432909, max=41.133190, mean=5.272349
+2025-10-18 19:58:31 - INFO - Loss value: 43.585567474365234
+2025-10-18 19:58:33 - INFO - Predictions stats: min=-4.098606, max=42.116268, mean=5.428741
+2025-10-18 19:58:33 - INFO - Loss value: 42.318355560302734
+2025-10-18 19:58:34 - INFO - Predictions stats: min=-8.475213, max=41.178253, mean=5.311738
+2025-10-18 19:58:34 - INFO - Loss value: 40.811431884765625
+2025-10-18 19:58:36 - INFO - Predictions stats: min=-5.426179, max=42.384487, mean=5.728144
+2025-10-18 19:58:36 - INFO - Loss value: 40.1640739440918
+2025-10-18 19:58:37 - INFO - Predictions stats: min=-5.351171, max=43.874058, mean=5.469188
+2025-10-18 19:58:37 - INFO - Loss value: 39.82421112060547
+2025-10-18 19:58:39 - INFO - Predictions stats: min=-6.170344, max=43.551277, mean=5.527696
+2025-10-18 19:58:39 - INFO - Loss value: 38.14833450317383
+2025-10-18 19:58:40 - INFO - Predictions stats: min=-5.131283, max=41.857590, mean=5.213658
+2025-10-18 19:58:40 - INFO - Loss value: 36.744598388671875
+2025-10-18 19:58:48 - INFO - Epoch 95: Training Loss: 49.2835, Validation Loss: 43.6383
+2025-10-18 19:58:49 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 19:58:49 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 19:58:49 - INFO - RDM shape: (48, 48)
+
+2025-10-18 19:58:49 - INFO - First 5x5 of the RDM:
+2025-10-18 19:58:49 - INFO - [[0.         0.91127961 0.34789806 0.87499458 0.852672  ]
+ [0.91127961 0.         0.72758362 0.30795601 0.86435261]
+ [0.34789806 0.72758362 0.         0.78936676 0.78067567]
+ [0.87499458 0.30795601 0.78936676 0.         0.98026224]
+ [0.852672   0.86435261 0.78067567 0.98026224 0.        ]]
+2025-10-18 19:58:49 - INFO - 
+
+2025-10-18 19:58:49 - INFO - First 5x5 of the reference RDM:
+2025-10-18 19:58:49 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 19:58:49 - INFO - 
+
+2025-10-18 19:58:49 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 19:58:49 - INFO - First 5 model rdm values: [0.91127961 0.34789806 0.87499458 0.852672   0.86186685]
+
+2025-10-18 19:58:49 - INFO - Behavioral RSA Correlation & p-value: 0.6836, 0.0000
+2025-10-18 19:58:49 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 19:58:49 - INFO -   m: shape torch.Size([1024])
+2025-10-18 19:58:49 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 19:58:49 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 19:58:49 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 19:58:49 - INFO -   m: shape torch.Size([1024])
+2025-10-18 19:58:49 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 19:58:49 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 19:58:49 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 19:58:49 - INFO -   m: shape torch.Size([768])
+2025-10-18 19:58:49 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 19:58:49 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 19:58:49 - INFO - DoRA parameters saved for epoch 95
+2025-10-18 19:58:50 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch95_random_states.pth
+2025-10-18 19:58:51 - INFO - Predictions stats: min=-4.202210, max=47.103577, mean=5.606618
+2025-10-18 19:58:51 - INFO - Loss value: 34.74351501464844
+2025-10-18 19:58:53 - INFO - Predictions stats: min=-5.885333, max=46.341202, mean=5.562554
+2025-10-18 19:58:53 - INFO - Loss value: 35.631126403808594
+2025-10-18 19:58:54 - INFO - Predictions stats: min=-8.121465, max=49.502991, mean=5.858489
+2025-10-18 19:58:54 - INFO - Loss value: 34.08770751953125
+2025-10-18 19:58:56 - INFO - Predictions stats: min=-4.034604, max=48.378162, mean=5.674421
+2025-10-18 19:58:56 - INFO - Loss value: 32.518070220947266
+2025-10-18 19:58:57 - INFO - Predictions stats: min=-5.728709, max=46.350845, mean=5.322450
+2025-10-18 19:58:57 - INFO - Loss value: 30.780529022216797
+2025-10-18 19:58:59 - INFO - Predictions stats: min=-5.085872, max=49.226227, mean=5.615564
+2025-10-18 19:58:59 - INFO - Loss value: 30.73021697998047
+2025-10-18 19:59:00 - INFO - Predictions stats: min=-7.226700, max=53.091633, mean=5.458380
+2025-10-18 19:59:00 - INFO - Loss value: 31.95624351501465
+2025-10-18 19:59:01 - INFO - Predictions stats: min=-5.436604, max=51.385742, mean=5.801444
+2025-10-18 19:59:01 - INFO - Loss value: 29.102703094482422
+2025-10-18 19:59:03 - INFO - Predictions stats: min=-6.049230, max=56.107986, mean=5.326875
+2025-10-18 19:59:03 - INFO - Loss value: 28.606966018676758
+2025-10-18 19:59:05 - INFO - Predictions stats: min=-4.261491, max=54.933800, mean=5.442344
+2025-10-18 19:59:05 - INFO - Loss value: 27.804670333862305
+2025-10-18 19:59:06 - INFO - Predictions stats: min=-4.823927, max=55.822708, mean=5.335005
+2025-10-18 19:59:06 - INFO - Loss value: 27.707637786865234
+2025-10-18 19:59:07 - INFO - Predictions stats: min=-7.176502, max=55.597240, mean=5.556223
+2025-10-18 19:59:07 - INFO - Loss value: 27.79783058166504
+2025-10-18 19:59:09 - INFO - Predictions stats: min=-7.957952, max=55.080235, mean=5.573642
+2025-10-18 19:59:09 - INFO - Loss value: 25.932443618774414
+2025-10-18 19:59:10 - INFO - Predictions stats: min=-6.209841, max=58.204197, mean=5.669238
+2025-10-18 19:59:10 - INFO - Loss value: 27.437326431274414
+2025-10-18 19:59:12 - INFO - Predictions stats: min=-5.885935, max=59.065102, mean=5.635077
+2025-10-18 19:59:12 - INFO - Loss value: 24.053855895996094
+2025-10-18 19:59:13 - INFO - Predictions stats: min=-6.201583, max=61.128002, mean=5.632720
+2025-10-18 19:59:13 - INFO - Loss value: 23.964704513549805
+2025-10-18 19:59:15 - INFO - Predictions stats: min=-7.870008, max=61.230789, mean=5.607357
+2025-10-18 19:59:15 - INFO - Loss value: 25.21586036682129
+2025-10-18 19:59:16 - INFO - Predictions stats: min=-5.591586, max=64.286270, mean=5.517610
+2025-10-18 19:59:16 - INFO - Loss value: 23.297948837280273
+2025-10-18 19:59:18 - INFO - Predictions stats: min=-6.970097, max=64.210144, mean=5.471140
+2025-10-18 19:59:18 - INFO - Loss value: 20.852346420288086
+2025-10-18 19:59:19 - INFO - Predictions stats: min=-6.351356, max=66.212944, mean=5.967983
+2025-10-18 19:59:19 - INFO - Loss value: 23.267900466918945
+2025-10-18 19:59:21 - INFO - Predictions stats: min=-6.994189, max=69.320244, mean=5.544475
+2025-10-18 19:59:21 - INFO - Loss value: 21.365726470947266
+2025-10-18 19:59:22 - INFO - Predictions stats: min=-6.452109, max=67.115654, mean=5.806841
+2025-10-18 19:59:22 - INFO - Loss value: 21.88292121887207
+2025-10-18 19:59:23 - INFO - Predictions stats: min=-6.554334, max=68.217209, mean=5.701168
+2025-10-18 19:59:23 - INFO - Loss value: 20.883695602416992
+2025-10-18 19:59:31 - INFO - Epoch 96: Training Loss: 27.5007, Validation Loss: 30.9634
+2025-10-18 19:59:32 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 19:59:32 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 19:59:32 - INFO - RDM shape: (48, 48)
+
+2025-10-18 19:59:32 - INFO - First 5x5 of the RDM:
+2025-10-18 19:59:32 - INFO - [[0.         0.98335229 0.24180916 1.01763313 1.03153949]
+ [0.98335229 0.         0.76238194 0.2438573  1.06873858]
+ [0.24180916 0.76238194 0.         0.87844335 0.93490994]
+ [1.01763313 0.2438573  0.87844335 0.         1.17418323]
+ [1.03153949 1.06873858 0.93490994 1.17418323 0.        ]]
+2025-10-18 19:59:32 - INFO - 
+
+2025-10-18 19:59:32 - INFO - First 5x5 of the reference RDM:
+2025-10-18 19:59:32 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 19:59:32 - INFO - 
+
+2025-10-18 19:59:32 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 19:59:32 - INFO - First 5 model rdm values: [0.98335229 0.24180916 1.01763313 1.03153949 1.03883244]
+
+2025-10-18 19:59:32 - INFO - Behavioral RSA Correlation & p-value: 0.7498, 0.0000
+2025-10-18 19:59:33 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 19:59:33 - INFO -   m: shape torch.Size([1024])
+2025-10-18 19:59:33 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 19:59:33 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 19:59:33 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 19:59:33 - INFO -   m: shape torch.Size([1024])
+2025-10-18 19:59:33 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 19:59:33 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 19:59:33 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 19:59:33 - INFO -   m: shape torch.Size([768])
+2025-10-18 19:59:33 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 19:59:33 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 19:59:33 - INFO - DoRA parameters saved for epoch 96
+2025-10-18 19:59:33 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch96_random_states.pth
+2025-10-18 19:59:34 - INFO - Predictions stats: min=-6.668579, max=72.204086, mean=5.557122
+2025-10-18 19:59:34 - INFO - Loss value: 19.568862915039062
+2025-10-18 19:59:36 - INFO - Predictions stats: min=-8.392468, max=73.059616, mean=5.556780
+2025-10-18 19:59:36 - INFO - Loss value: 21.45286750793457
+2025-10-18 19:59:37 - INFO - Predictions stats: min=-7.359538, max=75.565300, mean=5.596611
+2025-10-18 19:59:37 - INFO - Loss value: 18.85408592224121
+2025-10-18 19:59:39 - INFO - Predictions stats: min=-7.764136, max=75.972404, mean=5.530907
+2025-10-18 19:59:39 - INFO - Loss value: 20.084318161010742
+2025-10-18 19:59:40 - INFO - Predictions stats: min=-7.910624, max=77.375710, mean=5.625929
+2025-10-18 19:59:40 - INFO - Loss value: 18.782014846801758
+2025-10-18 19:59:42 - INFO - Predictions stats: min=-7.670003, max=79.444267, mean=5.644918
+2025-10-18 19:59:42 - INFO - Loss value: 19.49140739440918
+2025-10-18 19:59:43 - INFO - Predictions stats: min=-6.727484, max=79.219330, mean=5.717411
+2025-10-18 19:59:43 - INFO - Loss value: 19.025379180908203
+2025-10-18 19:59:45 - INFO - Predictions stats: min=-6.462696, max=80.998985, mean=5.962286
+2025-10-18 19:59:45 - INFO - Loss value: 21.589956283569336
+2025-10-18 19:59:46 - INFO - Predictions stats: min=-7.811047, max=78.670242, mean=5.999384
+2025-10-18 19:59:46 - INFO - Loss value: 21.08460235595703
+2025-10-18 19:59:48 - INFO - Predictions stats: min=-10.202202, max=77.202065, mean=5.769156
+2025-10-18 19:59:48 - INFO - Loss value: 20.519243240356445
+2025-10-18 19:59:49 - INFO - Predictions stats: min=-8.086585, max=80.474319, mean=5.477750
+2025-10-18 19:59:49 - INFO - Loss value: 18.726009368896484
+2025-10-18 19:59:51 - INFO - Predictions stats: min=-6.032072, max=81.605736, mean=5.464546
+2025-10-18 19:59:51 - INFO - Loss value: 19.823183059692383
+2025-10-18 19:59:52 - INFO - Predictions stats: min=-8.352288, max=81.703636, mean=5.714437
+2025-10-18 19:59:52 - INFO - Loss value: 18.6904296875
+2025-10-18 19:59:54 - INFO - Predictions stats: min=-8.922339, max=81.974258, mean=5.681659
+2025-10-18 19:59:54 - INFO - Loss value: 20.120012283325195
+2025-10-18 19:59:55 - INFO - Predictions stats: min=-6.219136, max=76.573128, mean=5.756528
+2025-10-18 19:59:55 - INFO - Loss value: 19.151424407958984
+2025-10-18 19:59:57 - INFO - Predictions stats: min=-6.560800, max=80.655243, mean=5.793993
+2025-10-18 19:59:57 - INFO - Loss value: 19.42216682434082
+2025-10-18 19:59:58 - INFO - Predictions stats: min=-6.726717, max=80.609451, mean=5.692715
+2025-10-18 19:59:58 - INFO - Loss value: 18.16516876220703
+2025-10-18 20:00:00 - INFO - Predictions stats: min=-7.677138, max=78.282860, mean=5.866090
+2025-10-18 20:00:00 - INFO - Loss value: 19.44137954711914
+2025-10-18 20:00:01 - INFO - Predictions stats: min=-8.174099, max=81.163284, mean=5.826182
+2025-10-18 20:00:01 - INFO - Loss value: 20.24317169189453
+2025-10-18 20:00:03 - INFO - Predictions stats: min=-6.025822, max=81.147278, mean=5.559266
+2025-10-18 20:00:03 - INFO - Loss value: 17.264467239379883
+2025-10-18 20:00:04 - INFO - Predictions stats: min=-7.610582, max=83.592514, mean=5.346220
+2025-10-18 20:00:04 - INFO - Loss value: 18.83620262145996
+2025-10-18 20:00:06 - INFO - Predictions stats: min=-7.798310, max=80.663101, mean=5.556904
+2025-10-18 20:00:06 - INFO - Loss value: 18.495716094970703
+2025-10-18 20:00:07 - INFO - Predictions stats: min=-6.539877, max=78.872391, mean=5.909827
+2025-10-18 20:00:07 - INFO - Loss value: 21.09246826171875
+2025-10-18 20:00:15 - INFO - Epoch 97: Training Loss: 19.5323, Validation Loss: 29.7479
+2025-10-18 20:00:16 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 20:00:16 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 20:00:16 - INFO - RDM shape: (48, 48)
+
+2025-10-18 20:00:16 - INFO - First 5x5 of the RDM:
+2025-10-18 20:00:16 - INFO - [[0.         1.06992401 0.26541197 1.07618745 1.05156653]
+ [1.06992401 0.         0.86558955 0.25300228 1.08544721]
+ [0.26541197 0.86558955 0.         0.95052976 0.93574493]
+ [1.07618745 0.25300228 0.95052976 0.         1.19960746]
+ [1.05156653 1.08544721 0.93574493 1.19960746 0.        ]]
+2025-10-18 20:00:16 - INFO - 
+
+2025-10-18 20:00:16 - INFO - First 5x5 of the reference RDM:
+2025-10-18 20:00:16 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 20:00:16 - INFO - 
+
+2025-10-18 20:00:16 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 20:00:16 - INFO - First 5 model rdm values: [1.06992401 0.26541197 1.07618745 1.05156653 1.03917209]
+
+2025-10-18 20:00:16 - INFO - Behavioral RSA Correlation & p-value: 0.7596, 0.0000
+2025-10-18 20:00:16 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 20:00:16 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:00:16 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:00:16 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:00:16 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 20:00:16 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:00:16 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:00:16 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:00:16 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 20:00:16 - INFO -   m: shape torch.Size([768])
+2025-10-18 20:00:16 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 20:00:16 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 20:00:16 - INFO - DoRA parameters saved for epoch 97
+2025-10-18 20:00:16 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch97_random_states.pth
+2025-10-18 20:00:18 - INFO - Predictions stats: min=-6.603520, max=78.859039, mean=5.568486
+2025-10-18 20:00:18 - INFO - Loss value: 21.46292495727539
+2025-10-18 20:00:19 - INFO - Predictions stats: min=-7.471891, max=82.320213, mean=5.466570
+2025-10-18 20:00:19 - INFO - Loss value: 16.976390838623047
+2025-10-18 20:00:21 - INFO - Predictions stats: min=-7.806534, max=80.947006, mean=5.929049
+2025-10-18 20:00:21 - INFO - Loss value: 18.444520950317383
+2025-10-18 20:00:22 - INFO - Predictions stats: min=-7.750323, max=82.187904, mean=5.862723
+2025-10-18 20:00:22 - INFO - Loss value: 18.63699722290039
+2025-10-18 20:00:24 - INFO - Predictions stats: min=-7.387821, max=82.570137, mean=5.617763
+2025-10-18 20:00:24 - INFO - Loss value: 16.59005355834961
+2025-10-18 20:00:25 - INFO - Predictions stats: min=-7.290000, max=82.577759, mean=5.770362
+2025-10-18 20:00:25 - INFO - Loss value: 19.08507537841797
+2025-10-18 20:00:27 - INFO - Predictions stats: min=-9.269239, max=81.146767, mean=5.718831
+2025-10-18 20:00:27 - INFO - Loss value: 18.719654083251953
+2025-10-18 20:00:28 - INFO - Predictions stats: min=-8.446835, max=82.802841, mean=5.640292
+2025-10-18 20:00:28 - INFO - Loss value: 17.804044723510742
+2025-10-18 20:00:30 - INFO - Predictions stats: min=-8.934907, max=81.620232, mean=5.589973
+2025-10-18 20:00:30 - INFO - Loss value: 18.9912109375
+2025-10-18 20:00:31 - INFO - Predictions stats: min=-8.792730, max=81.130157, mean=5.531058
+2025-10-18 20:00:31 - INFO - Loss value: 17.250080108642578
+2025-10-18 20:00:33 - INFO - Predictions stats: min=-7.285309, max=83.352547, mean=5.783720
+2025-10-18 20:00:33 - INFO - Loss value: 18.154592514038086
+2025-10-18 20:00:34 - INFO - Predictions stats: min=-6.985188, max=78.134552, mean=5.870937
+2025-10-18 20:00:34 - INFO - Loss value: 18.283321380615234
+2025-10-18 20:00:36 - INFO - Predictions stats: min=-5.992613, max=82.455276, mean=5.752331
+2025-10-18 20:00:36 - INFO - Loss value: 17.060379028320312
+2025-10-18 20:00:37 - INFO - Predictions stats: min=-6.410710, max=81.569794, mean=5.684470
+2025-10-18 20:00:37 - INFO - Loss value: 17.39741325378418
+2025-10-18 20:00:38 - INFO - Predictions stats: min=-7.396734, max=81.055267, mean=5.662235
+2025-10-18 20:00:38 - INFO - Loss value: 18.631221771240234
+2025-10-18 20:00:40 - INFO - Predictions stats: min=-8.424747, max=80.337997, mean=5.542645
+2025-10-18 20:00:40 - INFO - Loss value: 20.473730087280273
+2025-10-18 20:00:41 - INFO - Predictions stats: min=-8.473021, max=84.367165, mean=5.567493
+2025-10-18 20:00:41 - INFO - Loss value: 16.9544734954834
+2025-10-18 20:00:43 - INFO - Predictions stats: min=-6.989550, max=82.437614, mean=5.633265
+2025-10-18 20:00:43 - INFO - Loss value: 18.942102432250977
+2025-10-18 20:00:44 - INFO - Predictions stats: min=-7.424022, max=81.383812, mean=5.551253
+2025-10-18 20:00:44 - INFO - Loss value: 18.00519561767578
+2025-10-18 20:00:46 - INFO - Predictions stats: min=-8.464303, max=81.427940, mean=5.671957
+2025-10-18 20:00:46 - INFO - Loss value: 17.95169448852539
+2025-10-18 20:00:47 - INFO - Predictions stats: min=-7.435927, max=81.197906, mean=5.658920
+2025-10-18 20:00:47 - INFO - Loss value: 19.322757720947266
+2025-10-18 20:00:49 - INFO - Predictions stats: min=-8.075421, max=83.698959, mean=5.816762
+2025-10-18 20:00:49 - INFO - Loss value: 19.005653381347656
+2025-10-18 20:00:50 - INFO - Predictions stats: min=-6.956682, max=80.727608, mean=5.742024
+2025-10-18 20:00:50 - INFO - Loss value: 18.376588821411133
+2025-10-18 20:00:58 - INFO - Epoch 98: Training Loss: 18.3703, Validation Loss: 29.3553
+2025-10-18 20:00:59 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 20:00:59 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 20:00:59 - INFO - RDM shape: (48, 48)
+
+2025-10-18 20:00:59 - INFO - First 5x5 of the RDM:
+2025-10-18 20:00:59 - INFO - [[0.         1.04329778 0.27875418 1.06060844 1.06965658]
+ [1.04329778 0.         0.84611089 0.27666753 1.08221651]
+ [0.27875418 0.84611089 0.         0.93968446 0.95065996]
+ [1.06060844 0.27666753 0.93968446 0.         1.18805675]
+ [1.06965658 1.08221651 0.95065996 1.18805675 0.        ]]
+2025-10-18 20:00:59 - INFO - 
+
+2025-10-18 20:00:59 - INFO - First 5x5 of the reference RDM:
+2025-10-18 20:00:59 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 20:00:59 - INFO - 
+
+2025-10-18 20:00:59 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 20:00:59 - INFO - First 5 model rdm values: [1.04329778 0.27875418 1.06060844 1.06965658 1.07116274]
+
+2025-10-18 20:00:59 - INFO - Behavioral RSA Correlation & p-value: 0.7580, 0.0000
+2025-10-18 20:01:00 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 20:01:00 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:01:00 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:01:00 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:01:00 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 20:01:00 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:01:00 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:01:00 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:01:00 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 20:01:00 - INFO -   m: shape torch.Size([768])
+2025-10-18 20:01:00 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 20:01:00 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 20:01:00 - INFO - DoRA parameters saved for epoch 98
+2025-10-18 20:01:00 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch98_random_states.pth
+2025-10-18 20:01:01 - INFO - Predictions stats: min=-7.445145, max=80.321449, mean=5.750940
+2025-10-18 20:01:01 - INFO - Loss value: 18.35875129699707
+2025-10-18 20:01:03 - INFO - Predictions stats: min=-7.149658, max=83.784271, mean=5.583431
+2025-10-18 20:01:03 - INFO - Loss value: 17.23379135131836
+2025-10-18 20:01:04 - INFO - Predictions stats: min=-6.295028, max=81.578140, mean=5.612033
+2025-10-18 20:01:04 - INFO - Loss value: 16.913818359375
+2025-10-18 20:01:06 - INFO - Predictions stats: min=-8.854547, max=80.679985, mean=5.601074
+2025-10-18 20:01:06 - INFO - Loss value: 19.232309341430664
+2025-10-18 20:01:07 - INFO - Predictions stats: min=-7.204107, max=83.281967, mean=5.712937
+2025-10-18 20:01:07 - INFO - Loss value: 17.39173126220703
+2025-10-18 20:01:09 - INFO - Predictions stats: min=-6.458500, max=82.112038, mean=5.510308
+2025-10-18 20:01:09 - INFO - Loss value: 17.721540451049805
+2025-10-18 20:01:10 - INFO - Predictions stats: min=-5.905410, max=82.512436, mean=5.847827
+2025-10-18 20:01:10 - INFO - Loss value: 19.861942291259766
+2025-10-18 20:01:12 - INFO - Predictions stats: min=-5.717080, max=79.424911, mean=5.787733
+2025-10-18 20:01:12 - INFO - Loss value: 17.574764251708984
+2025-10-18 20:01:13 - INFO - Predictions stats: min=-8.716677, max=79.621620, mean=5.727796
+2025-10-18 20:01:13 - INFO - Loss value: 17.86301040649414
+2025-10-18 20:01:15 - INFO - Predictions stats: min=-6.536172, max=81.832939, mean=5.576729
+2025-10-18 20:01:15 - INFO - Loss value: 15.402237892150879
+2025-10-18 20:01:16 - INFO - Predictions stats: min=-8.150938, max=80.799004, mean=5.716527
+2025-10-18 20:01:16 - INFO - Loss value: 17.009000778198242
+2025-10-18 20:01:18 - INFO - Predictions stats: min=-8.638662, max=81.937599, mean=5.695959
+2025-10-18 20:01:18 - INFO - Loss value: 17.291765213012695
+2025-10-18 20:01:19 - INFO - Predictions stats: min=-7.781813, max=83.627892, mean=5.667792
+2025-10-18 20:01:19 - INFO - Loss value: 17.419776916503906
+2025-10-18 20:01:21 - INFO - Predictions stats: min=-6.683631, max=83.192642, mean=5.553472
+2025-10-18 20:01:21 - INFO - Loss value: 18.804777145385742
+2025-10-18 20:01:22 - INFO - Predictions stats: min=-6.297954, max=83.640053, mean=5.881933
+2025-10-18 20:01:22 - INFO - Loss value: 18.620296478271484
+2025-10-18 20:01:23 - INFO - Predictions stats: min=-8.637290, max=84.035927, mean=5.841555
+2025-10-18 20:01:23 - INFO - Loss value: 17.94546127319336
+2025-10-18 20:01:25 - INFO - Predictions stats: min=-7.876075, max=85.049164, mean=5.724388
+2025-10-18 20:01:25 - INFO - Loss value: 19.381921768188477
+2025-10-18 20:01:26 - INFO - Predictions stats: min=-7.404556, max=82.211395, mean=5.637665
+2025-10-18 20:01:26 - INFO - Loss value: 19.15005111694336
+2025-10-18 20:01:28 - INFO - Predictions stats: min=-7.480967, max=80.505798, mean=5.849792
+2025-10-18 20:01:28 - INFO - Loss value: 18.197494506835938
+2025-10-18 20:01:29 - INFO - Predictions stats: min=-5.594817, max=78.861572, mean=5.458334
+2025-10-18 20:01:29 - INFO - Loss value: 17.76665496826172
+2025-10-18 20:01:31 - INFO - Predictions stats: min=-8.353458, max=83.584755, mean=5.604533
+2025-10-18 20:01:31 - INFO - Loss value: 16.357263565063477
+2025-10-18 20:01:32 - INFO - Predictions stats: min=-8.892150, max=84.851875, mean=5.576835
+2025-10-18 20:01:32 - INFO - Loss value: 17.20598030090332
+2025-10-18 20:01:33 - INFO - Predictions stats: min=-6.989279, max=74.667717, mean=5.929069
+2025-10-18 20:01:33 - INFO - Loss value: 17.49720573425293
+2025-10-18 20:01:42 - INFO - Epoch 99: Training Loss: 17.8414, Validation Loss: 29.3153
+2025-10-18 20:01:43 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 20:01:43 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 20:01:43 - INFO - RDM shape: (48, 48)
+
+2025-10-18 20:01:43 - INFO - First 5x5 of the RDM:
+2025-10-18 20:01:43 - INFO - [[0.         1.04836651 0.28148786 1.06637166 1.06469775]
+ [1.04836651 0.         0.8580076  0.27972426 1.07918939]
+ [0.28148786 0.8580076  0.         0.95378567 0.94817004]
+ [1.06637166 0.27972426 0.95378567 0.         1.18383367]
+ [1.06469775 1.07918939 0.94817004 1.18383367 0.        ]]
+2025-10-18 20:01:43 - INFO - 
+
+2025-10-18 20:01:43 - INFO - First 5x5 of the reference RDM:
+2025-10-18 20:01:43 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 20:01:43 - INFO - 
+
+2025-10-18 20:01:43 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 20:01:43 - INFO - First 5 model rdm values: [1.04836651 0.28148786 1.06637166 1.06469775 1.07433524]
+
+2025-10-18 20:01:43 - INFO - Behavioral RSA Correlation & p-value: 0.7604, 0.0000
+2025-10-18 20:01:43 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 20:01:43 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:01:43 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:01:43 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:01:43 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 20:01:43 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:01:43 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:01:43 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:01:43 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 20:01:43 - INFO -   m: shape torch.Size([768])
+2025-10-18 20:01:43 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 20:01:43 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 20:01:43 - INFO - DoRA parameters saved for epoch 99
+2025-10-18 20:01:43 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch99_random_states.pth
+2025-10-18 20:01:45 - INFO - Predictions stats: min=-7.244214, max=84.131798, mean=5.725867
+2025-10-18 20:01:45 - INFO - Loss value: 16.606420516967773
+2025-10-18 20:01:46 - INFO - Predictions stats: min=-7.228306, max=80.605904, mean=5.666655
+2025-10-18 20:01:46 - INFO - Loss value: 17.4080810546875
+2025-10-18 20:01:48 - INFO - Predictions stats: min=-7.645420, max=82.663666, mean=5.863655
+2025-10-18 20:01:48 - INFO - Loss value: 19.93531036376953
+2025-10-18 20:01:49 - INFO - Predictions stats: min=-6.054555, max=85.052910, mean=5.519291
+2025-10-18 20:01:49 - INFO - Loss value: 16.754732131958008
+2025-10-18 20:01:51 - INFO - Predictions stats: min=-7.739702, max=82.687744, mean=5.627938
+2025-10-18 20:01:51 - INFO - Loss value: 17.64282989501953
+2025-10-18 20:01:52 - INFO - Predictions stats: min=-8.630618, max=83.094994, mean=5.802771
+2025-10-18 20:01:52 - INFO - Loss value: 16.52106285095215
+2025-10-18 20:01:54 - INFO - Predictions stats: min=-6.484799, max=82.471825, mean=5.735571
+2025-10-18 20:01:54 - INFO - Loss value: 15.795047760009766
+2025-10-18 20:01:55 - INFO - Predictions stats: min=-7.027123, max=83.712578, mean=5.530175
+2025-10-18 20:01:55 - INFO - Loss value: 18.495695114135742
+2025-10-18 20:01:57 - INFO - Predictions stats: min=-6.120394, max=84.760460, mean=5.909311
+2025-10-18 20:01:57 - INFO - Loss value: 17.35167121887207
+2025-10-18 20:01:58 - INFO - Predictions stats: min=-7.709170, max=84.100449, mean=5.681273
+2025-10-18 20:01:58 - INFO - Loss value: 17.7141056060791
+2025-10-18 20:02:00 - INFO - Predictions stats: min=-7.937743, max=84.258987, mean=5.593043
+2025-10-18 20:02:00 - INFO - Loss value: 16.781944274902344
+2025-10-18 20:02:01 - INFO - Predictions stats: min=-6.979956, max=82.996498, mean=5.771955
+2025-10-18 20:02:01 - INFO - Loss value: 16.566457748413086
+2025-10-18 20:02:03 - INFO - Predictions stats: min=-8.337643, max=82.701180, mean=5.668773
+2025-10-18 20:02:03 - INFO - Loss value: 17.901731491088867
+2025-10-18 20:02:04 - INFO - Predictions stats: min=-8.349265, max=79.426697, mean=5.793285
+2025-10-18 20:02:04 - INFO - Loss value: 19.302377700805664
+2025-10-18 20:02:06 - INFO - Predictions stats: min=-9.209704, max=81.909286, mean=5.528198
+2025-10-18 20:02:06 - INFO - Loss value: 16.858413696289062
+2025-10-18 20:02:07 - INFO - Predictions stats: min=-5.762575, max=81.005692, mean=5.652726
+2025-10-18 20:02:07 - INFO - Loss value: 17.252580642700195
+2025-10-18 20:02:09 - INFO - Predictions stats: min=-6.910814, max=80.582756, mean=5.576737
+2025-10-18 20:02:09 - INFO - Loss value: 17.491147994995117
+2025-10-18 20:02:10 - INFO - Predictions stats: min=-8.515981, max=83.049561, mean=5.553984
+2025-10-18 20:02:10 - INFO - Loss value: 18.444509506225586
+2025-10-18 20:02:11 - INFO - Predictions stats: min=-7.642846, max=82.406914, mean=5.808738
+2025-10-18 20:02:12 - INFO - Loss value: 19.314558029174805
+2025-10-18 20:02:13 - INFO - Predictions stats: min=-8.763708, max=82.249229, mean=5.751390
+2025-10-18 20:02:13 - INFO - Loss value: 16.802383422851562
+2025-10-18 20:02:15 - INFO - Predictions stats: min=-7.173321, max=81.684723, mean=5.937327
+2025-10-18 20:02:15 - INFO - Loss value: 18.130674362182617
+2025-10-18 20:02:16 - INFO - Predictions stats: min=-7.780359, max=84.499161, mean=5.456799
+2025-10-18 20:02:16 - INFO - Loss value: 15.75164794921875
+2025-10-18 20:02:17 - INFO - Predictions stats: min=-8.132426, max=85.566452, mean=5.595813
+2025-10-18 20:02:17 - INFO - Loss value: 17.73500633239746
+2025-10-18 20:02:25 - INFO - Epoch 100: Training Loss: 17.4980, Validation Loss: 29.2260
+2025-10-18 20:02:26 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 20:02:26 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 20:02:26 - INFO - RDM shape: (48, 48)
+
+2025-10-18 20:02:26 - INFO - First 5x5 of the RDM:
+2025-10-18 20:02:26 - INFO - [[0.         1.04438395 0.28456025 1.05837332 1.04974183]
+ [1.04438395 0.         0.85984398 0.28383357 1.08006053]
+ [0.28456025 0.85984398 0.         0.95594065 0.9424892 ]
+ [1.05837332 0.28383357 0.95594065 0.         1.17747444]
+ [1.04974183 1.08006053 0.9424892  1.17747444 0.        ]]
+2025-10-18 20:02:26 - INFO - 
+
+2025-10-18 20:02:26 - INFO - First 5x5 of the reference RDM:
+2025-10-18 20:02:26 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 20:02:26 - INFO - 
+
+2025-10-18 20:02:26 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 20:02:26 - INFO - First 5 model rdm values: [1.04438395 0.28456025 1.05837332 1.04974183 1.07124967]
+
+2025-10-18 20:02:26 - INFO - Behavioral RSA Correlation & p-value: 0.7587, 0.0000
+2025-10-18 20:02:27 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 20:02:27 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:02:27 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:02:27 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:02:27 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 20:02:27 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:02:27 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:02:27 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:02:27 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 20:02:27 - INFO -   m: shape torch.Size([768])
+2025-10-18 20:02:27 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 20:02:27 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 20:02:27 - INFO - DoRA parameters saved for epoch 100
+2025-10-18 20:02:27 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch100_random_states.pth
+2025-10-18 20:02:28 - INFO - Predictions stats: min=-7.608987, max=82.668007, mean=5.648659
+2025-10-18 20:02:28 - INFO - Loss value: 17.38597297668457
+2025-10-18 20:02:30 - INFO - Predictions stats: min=-8.197327, max=83.015564, mean=5.671907
+2025-10-18 20:02:30 - INFO - Loss value: 18.66184425354004
+2025-10-18 20:02:32 - INFO - Predictions stats: min=-9.194710, max=84.170891, mean=5.617863
+2025-10-18 20:02:32 - INFO - Loss value: 15.979312896728516
+2025-10-18 20:02:33 - INFO - Predictions stats: min=-8.506985, max=84.103294, mean=5.604517
+2025-10-18 20:02:33 - INFO - Loss value: 15.827533721923828
+2025-10-18 20:02:34 - INFO - Predictions stats: min=-7.891969, max=78.903435, mean=5.772952
+2025-10-18 20:02:34 - INFO - Loss value: 16.69190788269043
+2025-10-18 20:02:36 - INFO - Predictions stats: min=-6.562918, max=83.672836, mean=5.642633
+2025-10-18 20:02:36 - INFO - Loss value: 16.6920166015625
+2025-10-18 20:02:37 - INFO - Predictions stats: min=-7.341921, max=80.914406, mean=5.736712
+2025-10-18 20:02:37 - INFO - Loss value: 16.92875862121582
+2025-10-18 20:02:39 - INFO - Predictions stats: min=-9.003716, max=75.799164, mean=5.929814
+2025-10-18 20:02:39 - INFO - Loss value: 18.74173355102539
+2025-10-18 20:02:40 - INFO - Predictions stats: min=-8.496507, max=84.348160, mean=5.685553
+2025-10-18 20:02:40 - INFO - Loss value: 19.77892303466797
+2025-10-18 20:02:42 - INFO - Predictions stats: min=-8.374132, max=80.152473, mean=5.609766
+2025-10-18 20:02:42 - INFO - Loss value: 17.567052841186523
+2025-10-18 20:02:43 - INFO - Predictions stats: min=-6.318942, max=82.777557, mean=5.660007
+2025-10-18 20:02:43 - INFO - Loss value: 18.94327735900879
+2025-10-18 20:02:45 - INFO - Predictions stats: min=-7.880832, max=82.912613, mean=5.715003
+2025-10-18 20:02:45 - INFO - Loss value: 18.04586410522461
+2025-10-18 20:02:46 - INFO - Predictions stats: min=-7.017019, max=85.092735, mean=5.654593
+2025-10-18 20:02:46 - INFO - Loss value: 16.55298614501953
+2025-10-18 20:02:48 - INFO - Predictions stats: min=-8.264718, max=81.395187, mean=5.613385
+2025-10-18 20:02:48 - INFO - Loss value: 16.366756439208984
+2025-10-18 20:02:49 - INFO - Predictions stats: min=-7.893567, max=85.499489, mean=5.645139
+2025-10-18 20:02:49 - INFO - Loss value: 16.92896842956543
+2025-10-18 20:02:51 - INFO - Predictions stats: min=-7.142311, max=82.797775, mean=5.804922
+2025-10-18 20:02:51 - INFO - Loss value: 16.074254989624023
+2025-10-18 20:02:52 - INFO - Predictions stats: min=-6.829050, max=84.712799, mean=5.620400
+2025-10-18 20:02:52 - INFO - Loss value: 16.33013343811035
+2025-10-18 20:02:54 - INFO - Predictions stats: min=-6.088140, max=84.019264, mean=5.710444
+2025-10-18 20:02:54 - INFO - Loss value: 16.244068145751953
+2025-10-18 20:02:55 - INFO - Predictions stats: min=-7.786377, max=82.519981, mean=5.599418
+2025-10-18 20:02:55 - INFO - Loss value: 16.101787567138672
+2025-10-18 20:02:57 - INFO - Predictions stats: min=-7.890709, max=85.646347, mean=5.716580
+2025-10-18 20:02:57 - INFO - Loss value: 18.081356048583984
+2025-10-18 20:02:58 - INFO - Predictions stats: min=-6.811409, max=81.607597, mean=5.675336
+2025-10-18 20:02:58 - INFO - Loss value: 15.7862548828125
+2025-10-18 20:03:00 - INFO - Predictions stats: min=-6.597223, max=82.184662, mean=5.669760
+2025-10-18 20:03:00 - INFO - Loss value: 19.32679557800293
+2025-10-18 20:03:01 - INFO - Predictions stats: min=-8.119514, max=82.938721, mean=5.672499
+2025-10-18 20:03:01 - INFO - Loss value: 16.45866584777832
+2025-10-18 20:03:09 - INFO - Epoch 101: Training Loss: 17.2098, Validation Loss: 29.2086
+2025-10-18 20:03:10 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 20:03:10 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 20:03:10 - INFO - RDM shape: (48, 48)
+
+2025-10-18 20:03:10 - INFO - First 5x5 of the RDM:
+2025-10-18 20:03:10 - INFO - [[0.         1.0408104  0.28431415 1.05062423 1.04738151]
+ [1.0408104  0.         0.85964918 0.28758621 1.08332163]
+ [0.28431415 0.85964918 0.         0.95471778 0.94952703]
+ [1.05062423 0.28758621 0.95471778 0.         1.17880246]
+ [1.04738151 1.08332163 0.94952703 1.17880246 0.        ]]
+2025-10-18 20:03:10 - INFO - 
+
+2025-10-18 20:03:10 - INFO - First 5x5 of the reference RDM:
+2025-10-18 20:03:10 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 20:03:10 - INFO - 
+
+2025-10-18 20:03:10 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 20:03:10 - INFO - First 5 model rdm values: [1.0408104  0.28431415 1.05062423 1.04738151 1.06230227]
+
+2025-10-18 20:03:10 - INFO - Behavioral RSA Correlation & p-value: 0.7581, 0.0000
+2025-10-18 20:03:10 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 20:03:10 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:03:10 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:03:10 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:03:10 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 20:03:10 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:03:10 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:03:10 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:03:10 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 20:03:10 - INFO -   m: shape torch.Size([768])
+2025-10-18 20:03:10 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 20:03:10 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 20:03:10 - INFO - DoRA parameters saved for epoch 101
+2025-10-18 20:03:10 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch101_random_states.pth
+2025-10-18 20:03:12 - INFO - Predictions stats: min=-7.933523, max=83.542641, mean=5.428266
+2025-10-18 20:03:12 - INFO - Loss value: 16.964811325073242
+2025-10-18 20:03:13 - INFO - Predictions stats: min=-7.447226, max=82.863968, mean=5.606163
+2025-10-18 20:03:13 - INFO - Loss value: 16.832216262817383
+2025-10-18 20:03:15 - INFO - Predictions stats: min=-7.822393, max=84.118011, mean=5.812247
+2025-10-18 20:03:15 - INFO - Loss value: 15.584389686584473
+2025-10-18 20:03:16 - INFO - Predictions stats: min=-8.013256, max=83.127281, mean=5.750383
+2025-10-18 20:03:16 - INFO - Loss value: 16.449783325195312
+2025-10-18 20:03:18 - INFO - Predictions stats: min=-9.303239, max=82.187035, mean=5.545818
+2025-10-18 20:03:18 - INFO - Loss value: 16.844757080078125
+2025-10-18 20:03:19 - INFO - Predictions stats: min=-6.656316, max=81.202057, mean=5.784338
+2025-10-18 20:03:19 - INFO - Loss value: 16.05060577392578
+2025-10-18 20:03:21 - INFO - Predictions stats: min=-8.687130, max=84.893951, mean=5.601970
+2025-10-18 20:03:21 - INFO - Loss value: 15.85781478881836
+2025-10-18 20:03:22 - INFO - Predictions stats: min=-6.782100, max=86.102356, mean=5.621594
+2025-10-18 20:03:22 - INFO - Loss value: 17.899276733398438
+2025-10-18 20:03:24 - INFO - Predictions stats: min=-6.788538, max=83.484741, mean=5.593492
+2025-10-18 20:03:24 - INFO - Loss value: 17.687763214111328
+2025-10-18 20:03:25 - INFO - Predictions stats: min=-6.402024, max=84.523972, mean=5.362389
+2025-10-18 20:03:25 - INFO - Loss value: 15.955711364746094
+2025-10-18 20:03:27 - INFO - Predictions stats: min=-8.768336, max=85.059830, mean=5.756711
+2025-10-18 20:03:27 - INFO - Loss value: 17.590084075927734
+2025-10-18 20:03:28 - INFO - Predictions stats: min=-6.027272, max=82.507011, mean=5.847314
+2025-10-18 20:03:28 - INFO - Loss value: 16.78713607788086
+2025-10-18 20:03:29 - INFO - Predictions stats: min=-7.170169, max=85.507843, mean=5.813871
+2025-10-18 20:03:29 - INFO - Loss value: 16.705787658691406
+2025-10-18 20:03:31 - INFO - Predictions stats: min=-5.971415, max=85.208046, mean=5.830946
+2025-10-18 20:03:31 - INFO - Loss value: 16.84673500061035
+2025-10-18 20:03:33 - INFO - Predictions stats: min=-7.351764, max=82.562981, mean=5.545952
+2025-10-18 20:03:33 - INFO - Loss value: 16.7861385345459
+2025-10-18 20:03:34 - INFO - Predictions stats: min=-6.007039, max=82.576881, mean=5.832772
+2025-10-18 20:03:34 - INFO - Loss value: 17.30022621154785
+2025-10-18 20:03:35 - INFO - Predictions stats: min=-8.834683, max=83.400581, mean=5.737862
+2025-10-18 20:03:35 - INFO - Loss value: 17.47744369506836
+2025-10-18 20:03:37 - INFO - Predictions stats: min=-8.269785, max=85.961678, mean=5.649125
+2025-10-18 20:03:37 - INFO - Loss value: 17.20096206665039
+2025-10-18 20:03:38 - INFO - Predictions stats: min=-6.618636, max=82.216553, mean=5.633049
+2025-10-18 20:03:38 - INFO - Loss value: 17.85114860534668
+2025-10-18 20:03:40 - INFO - Predictions stats: min=-7.993551, max=84.280190, mean=5.640658
+2025-10-18 20:03:40 - INFO - Loss value: 17.414724349975586
+2025-10-18 20:03:41 - INFO - Predictions stats: min=-6.860691, max=83.054947, mean=5.802172
+2025-10-18 20:03:41 - INFO - Loss value: 18.230669021606445
+2025-10-18 20:03:43 - INFO - Predictions stats: min=-8.988102, max=84.719521, mean=5.694016
+2025-10-18 20:03:43 - INFO - Loss value: 17.359722137451172
+2025-10-18 20:03:44 - INFO - Predictions stats: min=-6.596004, max=83.578667, mean=5.756425
+2025-10-18 20:03:44 - INFO - Loss value: 17.493532180786133
+2025-10-18 20:03:52 - INFO - Epoch 102: Training Loss: 16.9980, Validation Loss: 29.2507
+2025-10-18 20:03:53 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 20:03:53 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 20:03:53 - INFO - RDM shape: (48, 48)
+
+2025-10-18 20:03:53 - INFO - First 5x5 of the RDM:
+2025-10-18 20:03:53 - INFO - [[0.         1.03956219 0.28927302 1.05679674 1.04921103]
+ [1.03956219 0.         0.85397482 0.28968336 1.08536102]
+ [0.28927302 0.85397482 0.         0.96052518 0.9585265 ]
+ [1.05679674 0.28968336 0.96052518 0.         1.17954294]
+ [1.04921103 1.08536102 0.9585265  1.17954294 0.        ]]
+2025-10-18 20:03:53 - INFO - 
+
+2025-10-18 20:03:53 - INFO - First 5x5 of the reference RDM:
+2025-10-18 20:03:53 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 20:03:53 - INFO - 
+
+2025-10-18 20:03:53 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 20:03:53 - INFO - First 5 model rdm values: [1.03956219 0.28927302 1.05679674 1.04921103 1.0756748 ]
+
+2025-10-18 20:03:53 - INFO - Behavioral RSA Correlation & p-value: 0.7565, 0.0000
+2025-10-18 20:03:53 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 20:03:53 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:03:53 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:03:53 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:03:53 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 20:03:53 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:03:53 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:03:53 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:03:53 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 20:03:53 - INFO -   m: shape torch.Size([768])
+2025-10-18 20:03:53 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 20:03:53 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 20:03:53 - INFO - DoRA parameters saved for epoch 102
+2025-10-18 20:03:54 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch102_random_states.pth
+2025-10-18 20:03:55 - INFO - Predictions stats: min=-7.316956, max=83.125076, mean=5.667799
+2025-10-18 20:03:55 - INFO - Loss value: 16.02678871154785
+2025-10-18 20:03:57 - INFO - Predictions stats: min=-8.758172, max=83.580154, mean=5.765434
+2025-10-18 20:03:57 - INFO - Loss value: 16.595727920532227
+2025-10-18 20:03:58 - INFO - Predictions stats: min=-6.092744, max=85.183319, mean=5.763219
+2025-10-18 20:03:58 - INFO - Loss value: 16.387855529785156
+2025-10-18 20:04:00 - INFO - Predictions stats: min=-6.887157, max=82.375374, mean=5.559707
+2025-10-18 20:04:00 - INFO - Loss value: 16.365598678588867
+2025-10-18 20:04:01 - INFO - Predictions stats: min=-8.555995, max=84.189049, mean=5.677519
+2025-10-18 20:04:01 - INFO - Loss value: 16.570371627807617
+2025-10-18 20:04:03 - INFO - Predictions stats: min=-9.258640, max=81.023773, mean=5.935673
+2025-10-18 20:04:03 - INFO - Loss value: 18.823867797851562
+2025-10-18 20:04:04 - INFO - Predictions stats: min=-7.087546, max=85.160919, mean=5.474622
+2025-10-18 20:04:04 - INFO - Loss value: 17.262910842895508
+2025-10-18 20:04:06 - INFO - Predictions stats: min=-8.967445, max=82.080742, mean=5.649515
+2025-10-18 20:04:06 - INFO - Loss value: 18.372026443481445
+2025-10-18 20:04:07 - INFO - Predictions stats: min=-6.923957, max=83.533821, mean=5.629070
+2025-10-18 20:04:07 - INFO - Loss value: 16.259342193603516
+2025-10-18 20:04:08 - INFO - Predictions stats: min=-7.336164, max=82.701508, mean=5.890290
+2025-10-18 20:04:08 - INFO - Loss value: 18.37692642211914
+2025-10-18 20:04:10 - INFO - Predictions stats: min=-5.439545, max=82.674744, mean=5.876243
+2025-10-18 20:04:10 - INFO - Loss value: 16.29879379272461
+2025-10-18 20:04:11 - INFO - Predictions stats: min=-8.709087, max=85.930183, mean=5.546044
+2025-10-18 20:04:11 - INFO - Loss value: 17.790935516357422
+2025-10-18 20:04:13 - INFO - Predictions stats: min=-8.264472, max=82.885300, mean=5.643026
+2025-10-18 20:04:13 - INFO - Loss value: 16.31556510925293
+2025-10-18 20:04:14 - INFO - Predictions stats: min=-8.054224, max=85.092560, mean=5.696636
+2025-10-18 20:04:14 - INFO - Loss value: 17.506208419799805
+2025-10-18 20:04:16 - INFO - Predictions stats: min=-7.087645, max=86.094406, mean=5.765789
+2025-10-18 20:04:16 - INFO - Loss value: 16.593902587890625
+2025-10-18 20:04:17 - INFO - Predictions stats: min=-7.308783, max=84.893456, mean=5.544996
+2025-10-18 20:04:17 - INFO - Loss value: 16.031612396240234
+2025-10-18 20:04:19 - INFO - Predictions stats: min=-9.063087, max=83.990761, mean=5.642820
+2025-10-18 20:04:19 - INFO - Loss value: 17.11420440673828
+2025-10-18 20:04:20 - INFO - Predictions stats: min=-8.541955, max=82.898232, mean=5.558714
+2025-10-18 20:04:20 - INFO - Loss value: 15.663705825805664
+2025-10-18 20:04:22 - INFO - Predictions stats: min=-6.480691, max=83.104172, mean=5.914763
+2025-10-18 20:04:22 - INFO - Loss value: 17.5833797454834
+2025-10-18 20:04:23 - INFO - Predictions stats: min=-7.060321, max=83.811638, mean=5.855834
+2025-10-18 20:04:23 - INFO - Loss value: 16.306930541992188
+2025-10-18 20:04:25 - INFO - Predictions stats: min=-7.189730, max=84.892426, mean=5.583311
+2025-10-18 20:04:25 - INFO - Loss value: 15.677675247192383
+2025-10-18 20:04:26 - INFO - Predictions stats: min=-6.627952, max=86.301132, mean=5.567843
+2025-10-18 20:04:26 - INFO - Loss value: 16.586078643798828
+2025-10-18 20:04:27 - INFO - Predictions stats: min=-7.067753, max=84.562668, mean=5.474413
+2025-10-18 20:04:27 - INFO - Loss value: 14.185588836669922
+2025-10-18 20:04:35 - INFO - Epoch 103: Training Loss: 16.7752, Validation Loss: 29.2148
+2025-10-18 20:04:36 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 20:04:36 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 20:04:36 - INFO - RDM shape: (48, 48)
+
+2025-10-18 20:04:36 - INFO - First 5x5 of the RDM:
+2025-10-18 20:04:36 - INFO - [[0.         1.05083639 0.29382375 1.06051239 1.05871643]
+ [1.05083639 0.         0.86065628 0.29053072 1.08496368]
+ [0.29382375 0.86065628 0.         0.95772769 0.95914732]
+ [1.06051239 0.29053072 0.95772769 0.         1.17814989]
+ [1.05871643 1.08496368 0.95914732 1.17814989 0.        ]]
+2025-10-18 20:04:36 - INFO - 
+
+2025-10-18 20:04:36 - INFO - First 5x5 of the reference RDM:
+2025-10-18 20:04:36 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 20:04:36 - INFO - 
+
+2025-10-18 20:04:36 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 20:04:36 - INFO - First 5 model rdm values: [1.05083639 0.29382375 1.06051239 1.05871643 1.07102692]
+
+2025-10-18 20:04:36 - INFO - Behavioral RSA Correlation & p-value: 0.7525, 0.0000
+2025-10-18 20:04:37 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 20:04:37 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:04:37 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:04:37 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:04:37 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 20:04:37 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:04:37 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:04:37 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:04:37 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 20:04:37 - INFO -   m: shape torch.Size([768])
+2025-10-18 20:04:37 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 20:04:37 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 20:04:37 - INFO - DoRA parameters saved for epoch 103
+2025-10-18 20:04:37 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch103_random_states.pth
+2025-10-18 20:04:39 - INFO - Predictions stats: min=-8.049452, max=84.021950, mean=5.826968
+2025-10-18 20:04:39 - INFO - Loss value: 17.635780334472656
+2025-10-18 20:04:40 - INFO - Predictions stats: min=-8.558850, max=82.856842, mean=5.452822
+2025-10-18 20:04:40 - INFO - Loss value: 15.080033302307129
+2025-10-18 20:04:42 - INFO - Predictions stats: min=-7.797616, max=85.577690, mean=5.617230
+2025-10-18 20:04:42 - INFO - Loss value: 17.400453567504883
+2025-10-18 20:04:43 - INFO - Predictions stats: min=-6.639323, max=83.645416, mean=5.727764
+2025-10-18 20:04:43 - INFO - Loss value: 17.5977840423584
+2025-10-18 20:04:45 - INFO - Predictions stats: min=-9.078427, max=83.641937, mean=5.669617
+2025-10-18 20:04:45 - INFO - Loss value: 16.397491455078125
+2025-10-18 20:04:46 - INFO - Predictions stats: min=-6.288336, max=86.061951, mean=5.598167
+2025-10-18 20:04:46 - INFO - Loss value: 16.59227180480957
+2025-10-18 20:04:48 - INFO - Predictions stats: min=-7.350212, max=81.594124, mean=5.714765
+2025-10-18 20:04:48 - INFO - Loss value: 16.281715393066406
+2025-10-18 20:04:49 - INFO - Predictions stats: min=-6.775571, max=84.581490, mean=5.639862
+2025-10-18 20:04:49 - INFO - Loss value: 16.881610870361328
+2025-10-18 20:04:51 - INFO - Predictions stats: min=-6.234535, max=83.775726, mean=5.710392
+2025-10-18 20:04:51 - INFO - Loss value: 17.54267692565918
+2025-10-18 20:04:52 - INFO - Predictions stats: min=-6.446660, max=79.760834, mean=5.943076
+2025-10-18 20:04:52 - INFO - Loss value: 16.683841705322266
+2025-10-18 20:04:53 - INFO - Predictions stats: min=-6.879352, max=84.183174, mean=5.597385
+2025-10-18 20:04:53 - INFO - Loss value: 15.936999320983887
+2025-10-18 20:04:55 - INFO - Predictions stats: min=-7.549580, max=82.855339, mean=5.740982
+2025-10-18 20:04:55 - INFO - Loss value: 17.457679748535156
+2025-10-18 20:04:56 - INFO - Predictions stats: min=-7.200402, max=85.383354, mean=5.780967
+2025-10-18 20:04:56 - INFO - Loss value: 16.347768783569336
+2025-10-18 20:04:58 - INFO - Predictions stats: min=-7.575907, max=83.829330, mean=5.502013
+2025-10-18 20:04:58 - INFO - Loss value: 15.552851676940918
+2025-10-18 20:04:59 - INFO - Predictions stats: min=-6.344793, max=86.261024, mean=5.663931
+2025-10-18 20:04:59 - INFO - Loss value: 16.823816299438477
+2025-10-18 20:05:01 - INFO - Predictions stats: min=-8.719982, max=85.405884, mean=5.649460
+2025-10-18 20:05:01 - INFO - Loss value: 15.250889778137207
+2025-10-18 20:05:02 - INFO - Predictions stats: min=-8.361444, max=82.891479, mean=5.775450
+2025-10-18 20:05:02 - INFO - Loss value: 16.491315841674805
+2025-10-18 20:05:04 - INFO - Predictions stats: min=-7.704707, max=83.942947, mean=5.911841
+2025-10-18 20:05:04 - INFO - Loss value: 17.788515090942383
+2025-10-18 20:05:05 - INFO - Predictions stats: min=-7.360052, max=82.775429, mean=5.786011
+2025-10-18 20:05:05 - INFO - Loss value: 15.32091999053955
+2025-10-18 20:05:07 - INFO - Predictions stats: min=-9.841455, max=86.462540, mean=5.798785
+2025-10-18 20:05:07 - INFO - Loss value: 18.470991134643555
+2025-10-18 20:05:08 - INFO - Predictions stats: min=-8.480156, max=83.620850, mean=5.478878
+2025-10-18 20:05:08 - INFO - Loss value: 15.515832901000977
+2025-10-18 20:05:10 - INFO - Predictions stats: min=-8.438203, max=85.032036, mean=5.590154
+2025-10-18 20:05:10 - INFO - Loss value: 16.152572631835938
+2025-10-18 20:05:11 - INFO - Predictions stats: min=-7.481948, max=83.854523, mean=5.519825
+2025-10-18 20:05:11 - INFO - Loss value: 14.999006271362305
+2025-10-18 20:05:19 - INFO - Epoch 104: Training Loss: 16.5603, Validation Loss: 29.2327
+2025-10-18 20:05:20 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 20:05:20 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 20:05:20 - INFO - RDM shape: (48, 48)
+
+2025-10-18 20:05:20 - INFO - First 5x5 of the RDM:
+2025-10-18 20:05:20 - INFO - [[0.         1.04129378 0.28799918 1.05564299 1.03750809]
+ [1.04129378 0.         0.85878757 0.29160869 1.0736184 ]
+ [0.28799918 0.85878757 0.         0.96057157 0.94368695]
+ [1.05564299 0.29160869 0.96057157 0.         1.17259976]
+ [1.03750809 1.0736184  0.94368695 1.17259976 0.        ]]
+2025-10-18 20:05:20 - INFO - 
+
+2025-10-18 20:05:20 - INFO - First 5x5 of the reference RDM:
+2025-10-18 20:05:20 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 20:05:20 - INFO - 
+
+2025-10-18 20:05:20 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 20:05:20 - INFO - First 5 model rdm values: [1.04129378 0.28799918 1.05564299 1.03750809 1.06038282]
+
+2025-10-18 20:05:20 - INFO - Behavioral RSA Correlation & p-value: 0.7554, 0.0000
+2025-10-18 20:05:20 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 20:05:20 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:05:20 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:05:20 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:05:20 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 20:05:20 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:05:20 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:05:20 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:05:20 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 20:05:20 - INFO -   m: shape torch.Size([768])
+2025-10-18 20:05:20 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 20:05:20 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 20:05:20 - INFO - DoRA parameters saved for epoch 104
+2025-10-18 20:05:21 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch104_random_states.pth
+2025-10-18 20:05:22 - INFO - Predictions stats: min=-8.103947, max=84.847473, mean=5.732714
+2025-10-18 20:05:22 - INFO - Loss value: 16.09102439880371
+2025-10-18 20:05:24 - INFO - Predictions stats: min=-8.712370, max=83.331177, mean=5.500751
+2025-10-18 20:05:24 - INFO - Loss value: 15.34362506866455
+2025-10-18 20:05:25 - INFO - Predictions stats: min=-7.629704, max=84.642525, mean=5.748883
+2025-10-18 20:05:25 - INFO - Loss value: 17.049367904663086
+2025-10-18 20:05:26 - INFO - Predictions stats: min=-7.218777, max=83.691124, mean=5.597112
+2025-10-18 20:05:26 - INFO - Loss value: 14.92579174041748
+2025-10-18 20:05:28 - INFO - Predictions stats: min=-9.015715, max=85.015083, mean=5.692359
+2025-10-18 20:05:28 - INFO - Loss value: 17.858366012573242
+2025-10-18 20:05:29 - INFO - Predictions stats: min=-6.569684, max=86.538872, mean=5.488196
+2025-10-18 20:05:29 - INFO - Loss value: 15.468430519104004
+2025-10-18 20:05:31 - INFO - Predictions stats: min=-8.170807, max=86.355247, mean=5.831265
+2025-10-18 20:05:31 - INFO - Loss value: 15.788415908813477
+2025-10-18 20:05:32 - INFO - Predictions stats: min=-6.477855, max=83.125481, mean=5.621068
+2025-10-18 20:05:32 - INFO - Loss value: 16.079317092895508
+2025-10-18 20:05:34 - INFO - Predictions stats: min=-6.740984, max=82.510376, mean=5.741864
+2025-10-18 20:05:34 - INFO - Loss value: 15.578868865966797
+2025-10-18 20:05:35 - INFO - Predictions stats: min=-7.443662, max=85.746063, mean=5.375290
+2025-10-18 20:05:35 - INFO - Loss value: 16.46689796447754
+2025-10-18 20:05:37 - INFO - Predictions stats: min=-9.206161, max=82.240318, mean=5.681188
+2025-10-18 20:05:37 - INFO - Loss value: 16.831029891967773
+2025-10-18 20:05:38 - INFO - Predictions stats: min=-8.908421, max=85.091370, mean=5.579486
+2025-10-18 20:05:38 - INFO - Loss value: 14.967523574829102
+2025-10-18 20:05:40 - INFO - Predictions stats: min=-8.635575, max=82.881882, mean=5.619546
+2025-10-18 20:05:40 - INFO - Loss value: 14.883319854736328
+2025-10-18 20:05:41 - INFO - Predictions stats: min=-6.734698, max=84.599091, mean=5.446289
+2025-10-18 20:05:41 - INFO - Loss value: 15.39348030090332
+2025-10-18 20:05:43 - INFO - Predictions stats: min=-6.472317, max=83.197372, mean=5.943309
+2025-10-18 20:05:43 - INFO - Loss value: 16.702001571655273
+2025-10-18 20:05:44 - INFO - Predictions stats: min=-8.178696, max=81.494080, mean=5.743918
+2025-10-18 20:05:44 - INFO - Loss value: 17.38221549987793
+2025-10-18 20:05:46 - INFO - Predictions stats: min=-8.495638, max=83.665802, mean=5.910823
+2025-10-18 20:05:46 - INFO - Loss value: 17.840187072753906
+2025-10-18 20:05:47 - INFO - Predictions stats: min=-8.704576, max=86.146927, mean=5.820510
+2025-10-18 20:05:47 - INFO - Loss value: 17.35192108154297
+2025-10-18 20:05:49 - INFO - Predictions stats: min=-6.338429, max=81.539528, mean=5.773206
+2025-10-18 20:05:49 - INFO - Loss value: 16.94294548034668
+2025-10-18 20:05:50 - INFO - Predictions stats: min=-7.193833, max=82.185768, mean=5.746151
+2025-10-18 20:05:50 - INFO - Loss value: 17.080801010131836
+2025-10-18 20:05:52 - INFO - Predictions stats: min=-8.480903, max=85.914612, mean=5.716375
+2025-10-18 20:05:52 - INFO - Loss value: 16.484317779541016
+2025-10-18 20:05:53 - INFO - Predictions stats: min=-7.139951, max=83.851059, mean=5.716607
+2025-10-18 20:05:53 - INFO - Loss value: 17.700817108154297
+2025-10-18 20:05:54 - INFO - Predictions stats: min=-8.159793, max=82.007179, mean=5.535433
+2025-10-18 20:05:54 - INFO - Loss value: 17.06305503845215
+2025-10-18 20:06:02 - INFO - Epoch 105: Training Loss: 16.3904, Validation Loss: 29.2302
+2025-10-18 20:06:03 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 20:06:03 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 20:06:03 - INFO - RDM shape: (48, 48)
+
+2025-10-18 20:06:03 - INFO - First 5x5 of the RDM:
+2025-10-18 20:06:03 - INFO - [[0.         1.03727243 0.2853071  1.05159005 1.03417298]
+ [1.03727243 0.         0.85189549 0.29071343 1.07188983]
+ [0.2853071  0.85189549 0.         0.95457804 0.9427814 ]
+ [1.05159005 0.29071343 0.95457804 0.         1.16877672]
+ [1.03417298 1.07188983 0.9427814  1.16877672 0.        ]]
+2025-10-18 20:06:03 - INFO - 
+
+2025-10-18 20:06:03 - INFO - First 5x5 of the reference RDM:
+2025-10-18 20:06:03 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 20:06:03 - INFO - 
+
+2025-10-18 20:06:03 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 20:06:03 - INFO - First 5 model rdm values: [1.03727243 0.2853071  1.05159005 1.03417298 1.05870151]
+
+2025-10-18 20:06:03 - INFO - Behavioral RSA Correlation & p-value: 0.7500, 0.0000
+2025-10-18 20:06:04 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 20:06:04 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:06:04 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:06:04 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:06:04 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 20:06:04 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:06:04 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:06:04 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:06:04 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 20:06:04 - INFO -   m: shape torch.Size([768])
+2025-10-18 20:06:04 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 20:06:04 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 20:06:04 - INFO - DoRA parameters saved for epoch 105
+2025-10-18 20:06:04 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch105_random_states.pth
+2025-10-18 20:06:05 - INFO - Predictions stats: min=-8.216629, max=82.975296, mean=5.752815
+2025-10-18 20:06:05 - INFO - Loss value: 16.517717361450195
+2025-10-18 20:06:07 - INFO - Predictions stats: min=-8.910160, max=82.976646, mean=5.662697
+2025-10-18 20:06:07 - INFO - Loss value: 15.730104446411133
+2025-10-18 20:06:08 - INFO - Predictions stats: min=-6.481887, max=86.394409, mean=5.591606
+2025-10-18 20:06:08 - INFO - Loss value: 14.126598358154297
+2025-10-18 20:06:10 - INFO - Predictions stats: min=-9.547205, max=84.210342, mean=5.789734
+2025-10-18 20:06:10 - INFO - Loss value: 16.979848861694336
+2025-10-18 20:06:11 - INFO - Predictions stats: min=-7.309331, max=85.855713, mean=5.745187
+2025-10-18 20:06:11 - INFO - Loss value: 16.629032135009766
+2025-10-18 20:06:13 - INFO - Predictions stats: min=-7.490745, max=78.998413, mean=5.844981
+2025-10-18 20:06:13 - INFO - Loss value: 16.880842208862305
+2025-10-18 20:06:14 - INFO - Predictions stats: min=-8.279632, max=78.148010, mean=5.747242
+2025-10-18 20:06:14 - INFO - Loss value: 16.591867446899414
+2025-10-18 20:06:16 - INFO - Predictions stats: min=-9.240050, max=83.176895, mean=5.579002
+2025-10-18 20:06:16 - INFO - Loss value: 17.833396911621094
+2025-10-18 20:06:17 - INFO - Predictions stats: min=-7.246975, max=84.244202, mean=5.648601
+2025-10-18 20:06:17 - INFO - Loss value: 16.604442596435547
+2025-10-18 20:06:19 - INFO - Predictions stats: min=-7.709104, max=82.934914, mean=5.552744
+2025-10-18 20:06:19 - INFO - Loss value: 16.47810935974121
+2025-10-18 20:06:20 - INFO - Predictions stats: min=-6.585369, max=81.851448, mean=5.940088
+2025-10-18 20:06:20 - INFO - Loss value: 16.196941375732422
+2025-10-18 20:06:22 - INFO - Predictions stats: min=-6.029016, max=83.066956, mean=5.813760
+2025-10-18 20:06:22 - INFO - Loss value: 16.67391586303711
+2025-10-18 20:06:23 - INFO - Predictions stats: min=-5.656487, max=82.038536, mean=5.784907
+2025-10-18 20:06:23 - INFO - Loss value: 15.333195686340332
+2025-10-18 20:06:25 - INFO - Predictions stats: min=-6.528782, max=83.896866, mean=5.733619
+2025-10-18 20:06:25 - INFO - Loss value: 16.091346740722656
+2025-10-18 20:06:26 - INFO - Predictions stats: min=-7.014080, max=83.169670, mean=5.660111
+2025-10-18 20:06:26 - INFO - Loss value: 15.381783485412598
+2025-10-18 20:06:28 - INFO - Predictions stats: min=-9.118820, max=86.448357, mean=5.509264
+2025-10-18 20:06:28 - INFO - Loss value: 16.7264404296875
+2025-10-18 20:06:29 - INFO - Predictions stats: min=-8.093448, max=85.643333, mean=5.533323
+2025-10-18 20:06:29 - INFO - Loss value: 15.462911605834961
+2025-10-18 20:06:31 - INFO - Predictions stats: min=-7.488514, max=83.800758, mean=5.536800
+2025-10-18 20:06:31 - INFO - Loss value: 17.064054489135742
+2025-10-18 20:06:32 - INFO - Predictions stats: min=-7.350218, max=86.704842, mean=5.502512
+2025-10-18 20:06:32 - INFO - Loss value: 14.165029525756836
+2025-10-18 20:06:34 - INFO - Predictions stats: min=-5.475635, max=83.824135, mean=5.883662
+2025-10-18 20:06:34 - INFO - Loss value: 16.066625595092773
+2025-10-18 20:06:35 - INFO - Predictions stats: min=-6.713897, max=82.131264, mean=5.826070
+2025-10-18 20:06:35 - INFO - Loss value: 17.189510345458984
+2025-10-18 20:06:36 - INFO - Predictions stats: min=-8.510793, max=85.830063, mean=5.686717
+2025-10-18 20:06:36 - INFO - Loss value: 16.180212020874023
+2025-10-18 20:06:37 - INFO - Predictions stats: min=-8.592495, max=83.444221, mean=5.581828
+2025-10-18 20:06:37 - INFO - Loss value: 16.37894058227539
+2025-10-18 20:06:45 - INFO - Epoch 106: Training Loss: 16.2268, Validation Loss: 29.2514
+2025-10-18 20:06:47 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 20:06:47 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 20:06:47 - INFO - RDM shape: (48, 48)
+
+2025-10-18 20:06:47 - INFO - First 5x5 of the RDM:
+2025-10-18 20:06:47 - INFO - [[0.         1.03683641 0.28851857 1.0512124  1.03517138]
+ [1.03683641 0.         0.84930989 0.29736159 1.07465036]
+ [0.28851857 0.84930989 0.         0.95540707 0.94772311]
+ [1.0512124  0.29736159 0.95540707 0.         1.17293882]
+ [1.03517138 1.07465036 0.94772311 1.17293882 0.        ]]
+2025-10-18 20:06:47 - INFO - 
+
+2025-10-18 20:06:47 - INFO - First 5x5 of the reference RDM:
+2025-10-18 20:06:47 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 20:06:47 - INFO - 
+
+2025-10-18 20:06:47 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 20:06:47 - INFO - First 5 model rdm values: [1.03683641 0.28851857 1.0512124  1.03517138 1.06570948]
+
+2025-10-18 20:06:47 - INFO - Behavioral RSA Correlation & p-value: 0.7533, 0.0000
+2025-10-18 20:06:47 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 20:06:47 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:06:47 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:06:47 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:06:47 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 20:06:47 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:06:47 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:06:47 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:06:47 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 20:06:47 - INFO -   m: shape torch.Size([768])
+2025-10-18 20:06:47 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 20:06:47 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 20:06:47 - INFO - DoRA parameters saved for epoch 106
+2025-10-18 20:06:47 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch106_random_states.pth
+2025-10-18 20:06:49 - INFO - Predictions stats: min=-6.905951, max=84.177551, mean=5.452805
+2025-10-18 20:06:49 - INFO - Loss value: 16.020442962646484
+2025-10-18 20:06:50 - INFO - Predictions stats: min=-6.590653, max=83.343651, mean=5.739796
+2025-10-18 20:06:50 - INFO - Loss value: 15.732023239135742
+2025-10-18 20:06:52 - INFO - Predictions stats: min=-7.171744, max=86.818062, mean=5.637691
+2025-10-18 20:06:52 - INFO - Loss value: 14.883408546447754
+2025-10-18 20:06:53 - INFO - Predictions stats: min=-6.297562, max=84.715652, mean=5.781993
+2025-10-18 20:06:53 - INFO - Loss value: 15.645197868347168
+2025-10-18 20:06:55 - INFO - Predictions stats: min=-6.242886, max=82.925140, mean=5.777674
+2025-10-18 20:06:55 - INFO - Loss value: 16.888126373291016
+2025-10-18 20:06:56 - INFO - Predictions stats: min=-7.434182, max=81.503433, mean=5.895019
+2025-10-18 20:06:56 - INFO - Loss value: 17.513731002807617
+2025-10-18 20:06:58 - INFO - Predictions stats: min=-6.979911, max=84.700752, mean=5.726587
+2025-10-18 20:06:58 - INFO - Loss value: 16.32988929748535
+2025-10-18 20:06:59 - INFO - Predictions stats: min=-8.220670, max=84.064507, mean=5.609240
+2025-10-18 20:06:59 - INFO - Loss value: 15.693219184875488
+2025-10-18 20:07:01 - INFO - Predictions stats: min=-7.487998, max=84.116974, mean=5.855909
+2025-10-18 20:07:01 - INFO - Loss value: 17.369157791137695
+2025-10-18 20:07:02 - INFO - Predictions stats: min=-9.573913, max=77.896637, mean=5.778202
+2025-10-18 20:07:02 - INFO - Loss value: 16.67094612121582
+2025-10-18 20:07:04 - INFO - Predictions stats: min=-9.144713, max=83.551979, mean=5.645923
+2025-10-18 20:07:04 - INFO - Loss value: 16.339078903198242
+2025-10-18 20:07:05 - INFO - Predictions stats: min=-6.724945, max=85.381294, mean=5.271306
+2025-10-18 20:07:05 - INFO - Loss value: 13.93435001373291
+2025-10-18 20:07:06 - INFO - Predictions stats: min=-8.737383, max=85.122490, mean=5.728980
+2025-10-18 20:07:06 - INFO - Loss value: 15.625736236572266
+2025-10-18 20:07:08 - INFO - Predictions stats: min=-7.908556, max=83.136017, mean=5.522364
+2025-10-18 20:07:08 - INFO - Loss value: 15.558279991149902
+2025-10-18 20:07:09 - INFO - Predictions stats: min=-8.329898, max=83.998199, mean=5.724541
+2025-10-18 20:07:09 - INFO - Loss value: 17.30015754699707
+2025-10-18 20:07:11 - INFO - Predictions stats: min=-7.501669, max=83.346870, mean=5.687624
+2025-10-18 20:07:11 - INFO - Loss value: 16.591081619262695
+2025-10-18 20:07:12 - INFO - Predictions stats: min=-8.345171, max=83.866898, mean=5.871644
+2025-10-18 20:07:12 - INFO - Loss value: 15.82085132598877
+2025-10-18 20:07:14 - INFO - Predictions stats: min=-7.361043, max=86.450302, mean=5.593326
+2025-10-18 20:07:14 - INFO - Loss value: 16.316089630126953
+2025-10-18 20:07:15 - INFO - Predictions stats: min=-10.257476, max=86.109451, mean=5.453587
+2025-10-18 20:07:15 - INFO - Loss value: 14.780383110046387
+2025-10-18 20:07:17 - INFO - Predictions stats: min=-9.145162, max=84.250679, mean=5.641835
+2025-10-18 20:07:17 - INFO - Loss value: 15.85866928100586
+2025-10-18 20:07:18 - INFO - Predictions stats: min=-5.930399, max=85.780746, mean=5.697546
+2025-10-18 20:07:18 - INFO - Loss value: 15.768693923950195
+2025-10-18 20:07:20 - INFO - Predictions stats: min=-6.761938, max=83.880005, mean=5.670241
+2025-10-18 20:07:20 - INFO - Loss value: 15.647128105163574
+2025-10-18 20:07:21 - INFO - Predictions stats: min=-6.804947, max=82.071396, mean=5.908320
+2025-10-18 20:07:21 - INFO - Loss value: 17.315420150756836
+2025-10-18 20:07:29 - INFO - Epoch 107: Training Loss: 16.0455, Validation Loss: 29.2592
+2025-10-18 20:07:30 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 20:07:30 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 20:07:30 - INFO - RDM shape: (48, 48)
+
+2025-10-18 20:07:30 - INFO - First 5x5 of the RDM:
+2025-10-18 20:07:30 - INFO - [[0.         1.0501832  0.28879282 1.05965457 1.02953203]
+ [1.0501832  0.         0.86583271 0.30070892 1.08225142]
+ [0.28879282 0.86583271 0.         0.96382265 0.942295  ]
+ [1.05965457 0.30070892 0.96382265 0.         1.17465761]
+ [1.02953203 1.08225142 0.942295   1.17465761 0.        ]]
+2025-10-18 20:07:30 - INFO - 
+
+2025-10-18 20:07:30 - INFO - First 5x5 of the reference RDM:
+2025-10-18 20:07:30 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 20:07:30 - INFO - 
+
+2025-10-18 20:07:30 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 20:07:30 - INFO - First 5 model rdm values: [1.0501832  0.28879282 1.05965457 1.02953203 1.06016301]
+
+2025-10-18 20:07:30 - INFO - Behavioral RSA Correlation & p-value: 0.7545, 0.0000
+2025-10-18 20:07:30 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 20:07:30 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:07:30 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:07:30 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:07:30 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 20:07:30 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:07:30 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:07:30 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:07:30 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 20:07:30 - INFO -   m: shape torch.Size([768])
+2025-10-18 20:07:30 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 20:07:30 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 20:07:30 - INFO - DoRA parameters saved for epoch 107
+2025-10-18 20:07:31 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch107_random_states.pth
+2025-10-18 20:07:32 - INFO - Predictions stats: min=-8.598384, max=83.920876, mean=5.820302
+2025-10-18 20:07:32 - INFO - Loss value: 16.39496612548828
+2025-10-18 20:07:34 - INFO - Predictions stats: min=-7.055677, max=84.005806, mean=5.658151
+2025-10-18 20:07:34 - INFO - Loss value: 15.804203033447266
+2025-10-18 20:07:35 - INFO - Predictions stats: min=-7.761643, max=83.872009, mean=5.715650
+2025-10-18 20:07:35 - INFO - Loss value: 15.383989334106445
+2025-10-18 20:07:36 - INFO - Predictions stats: min=-6.406473, max=83.630470, mean=5.841369
+2025-10-18 20:07:36 - INFO - Loss value: 15.018815040588379
+2025-10-18 20:07:38 - INFO - Predictions stats: min=-9.292823, max=84.851761, mean=5.498284
+2025-10-18 20:07:38 - INFO - Loss value: 16.61328125
+2025-10-18 20:07:39 - INFO - Predictions stats: min=-6.710229, max=84.437515, mean=5.390414
+2025-10-18 20:07:39 - INFO - Loss value: 14.065393447875977
+2025-10-18 20:07:41 - INFO - Predictions stats: min=-7.041196, max=80.519493, mean=5.720237
+2025-10-18 20:07:41 - INFO - Loss value: 16.82988739013672
+2025-10-18 20:07:42 - INFO - Predictions stats: min=-6.125964, max=80.957893, mean=5.485610
+2025-10-18 20:07:42 - INFO - Loss value: 13.975151062011719
+2025-10-18 20:07:44 - INFO - Predictions stats: min=-8.597543, max=83.935287, mean=5.744308
+2025-10-18 20:07:44 - INFO - Loss value: 15.422148704528809
+2025-10-18 20:07:45 - INFO - Predictions stats: min=-7.148475, max=86.690117, mean=5.746284
+2025-10-18 20:07:45 - INFO - Loss value: 16.15459442138672
+2025-10-18 20:07:47 - INFO - Predictions stats: min=-8.532557, max=85.494705, mean=5.806907
+2025-10-18 20:07:47 - INFO - Loss value: 16.992765426635742
+2025-10-18 20:07:48 - INFO - Predictions stats: min=-7.415636, max=86.844337, mean=5.644100
+2025-10-18 20:07:48 - INFO - Loss value: 16.105266571044922
+2025-10-18 20:07:50 - INFO - Predictions stats: min=-9.335951, max=85.924370, mean=5.769262
+2025-10-18 20:07:50 - INFO - Loss value: 17.86762237548828
+2025-10-18 20:07:51 - INFO - Predictions stats: min=-6.174074, max=85.856773, mean=5.629697
+2025-10-18 20:07:51 - INFO - Loss value: 15.180112838745117
+2025-10-18 20:07:52 - INFO - Predictions stats: min=-6.991838, max=85.385559, mean=5.707179
+2025-10-18 20:07:52 - INFO - Loss value: 16.757143020629883
+2025-10-18 20:07:54 - INFO - Predictions stats: min=-6.611817, max=83.711884, mean=5.726566
+2025-10-18 20:07:54 - INFO - Loss value: 15.830692291259766
+2025-10-18 20:07:55 - INFO - Predictions stats: min=-6.019979, max=84.808548, mean=5.658017
+2025-10-18 20:07:55 - INFO - Loss value: 14.636492729187012
+2025-10-18 20:07:57 - INFO - Predictions stats: min=-9.582398, max=86.508675, mean=5.476173
+2025-10-18 20:07:57 - INFO - Loss value: 15.915270805358887
+2025-10-18 20:07:58 - INFO - Predictions stats: min=-6.766257, max=81.898254, mean=5.886866
+2025-10-18 20:07:58 - INFO - Loss value: 16.529094696044922
+2025-10-18 20:08:00 - INFO - Predictions stats: min=-7.238090, max=83.213890, mean=5.703843
+2025-10-18 20:08:00 - INFO - Loss value: 14.864501953125
+2025-10-18 20:08:01 - INFO - Predictions stats: min=-6.190917, max=83.141586, mean=5.708549
+2025-10-18 20:08:01 - INFO - Loss value: 15.531572341918945
+2025-10-18 20:08:03 - INFO - Predictions stats: min=-7.647917, max=79.931923, mean=5.853926
+2025-10-18 20:08:03 - INFO - Loss value: 17.61583137512207
+2025-10-18 20:08:04 - INFO - Predictions stats: min=-5.439727, max=81.950554, mean=5.671590
+2025-10-18 20:08:04 - INFO - Loss value: 15.800333976745605
+2025-10-18 20:08:12 - INFO - Epoch 108: Training Loss: 15.8837, Validation Loss: 29.2300
+2025-10-18 20:08:13 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 20:08:13 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 20:08:13 - INFO - RDM shape: (48, 48)
+
+2025-10-18 20:08:13 - INFO - First 5x5 of the RDM:
+2025-10-18 20:08:13 - INFO - [[0.         1.04858641 0.29144924 1.05478879 1.03816438]
+ [1.04858641 0.         0.85718828 0.29469225 1.07406705]
+ [0.29144924 0.85718828 0.         0.95479911 0.94898533]
+ [1.05478879 0.29469225 0.95479911 0.         1.16848659]
+ [1.03816438 1.07406705 0.94898533 1.16848659 0.        ]]
+2025-10-18 20:08:13 - INFO - 
+
+2025-10-18 20:08:13 - INFO - First 5x5 of the reference RDM:
+2025-10-18 20:08:13 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 20:08:13 - INFO - 
+
+2025-10-18 20:08:13 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 20:08:13 - INFO - First 5 model rdm values: [1.04858641 0.29144924 1.05478879 1.03816438 1.07032091]
+
+2025-10-18 20:08:13 - INFO - Behavioral RSA Correlation & p-value: 0.7513, 0.0000
+2025-10-18 20:08:13 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 20:08:13 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:08:13 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:08:13 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:08:13 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 20:08:13 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:08:13 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:08:13 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:08:13 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 20:08:13 - INFO -   m: shape torch.Size([768])
+2025-10-18 20:08:13 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 20:08:13 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 20:08:13 - INFO - DoRA parameters saved for epoch 108
+2025-10-18 20:08:13 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch108_random_states.pth
+2025-10-18 20:08:15 - INFO - Predictions stats: min=-8.048363, max=84.411148, mean=5.490616
+2025-10-18 20:08:15 - INFO - Loss value: 15.305608749389648
+2025-10-18 20:08:16 - INFO - Predictions stats: min=-6.689021, max=83.281754, mean=5.719396
+2025-10-18 20:08:16 - INFO - Loss value: 15.783562660217285
+2025-10-18 20:08:18 - INFO - Predictions stats: min=-6.715635, max=82.134766, mean=5.666085
+2025-10-18 20:08:18 - INFO - Loss value: 14.94805908203125
+2025-10-18 20:08:19 - INFO - Predictions stats: min=-8.747155, max=83.067345, mean=5.784102
+2025-10-18 20:08:19 - INFO - Loss value: 15.966268539428711
+2025-10-18 20:08:21 - INFO - Predictions stats: min=-6.636266, max=84.088310, mean=5.977575
+2025-10-18 20:08:21 - INFO - Loss value: 15.931374549865723
+2025-10-18 20:08:22 - INFO - Predictions stats: min=-7.254119, max=82.159271, mean=5.754104
+2025-10-18 20:08:22 - INFO - Loss value: 15.614957809448242
+2025-10-18 20:08:24 - INFO - Predictions stats: min=-7.169899, max=83.662125, mean=5.752136
+2025-10-18 20:08:24 - INFO - Loss value: 15.46546745300293
+2025-10-18 20:08:25 - INFO - Predictions stats: min=-9.214410, max=86.748741, mean=5.471883
+2025-10-18 20:08:25 - INFO - Loss value: 14.265653610229492
+2025-10-18 20:08:27 - INFO - Predictions stats: min=-9.590620, max=82.442291, mean=5.660725
+2025-10-18 20:08:27 - INFO - Loss value: 16.827293395996094
+2025-10-18 20:08:28 - INFO - Predictions stats: min=-7.276662, max=86.911812, mean=5.554629
+2025-10-18 20:08:28 - INFO - Loss value: 15.843765258789062
+2025-10-18 20:08:30 - INFO - Predictions stats: min=-8.556354, max=83.647804, mean=5.661426
+2025-10-18 20:08:30 - INFO - Loss value: 17.501543045043945
+2025-10-18 20:08:31 - INFO - Predictions stats: min=-6.399321, max=82.866859, mean=5.541033
+2025-10-18 20:08:31 - INFO - Loss value: 16.36911392211914
+2025-10-18 20:08:33 - INFO - Predictions stats: min=-8.929949, max=86.223045, mean=5.709072
+2025-10-18 20:08:33 - INFO - Loss value: 15.17593002319336
+2025-10-18 20:08:34 - INFO - Predictions stats: min=-6.611015, max=84.096092, mean=5.783080
+2025-10-18 20:08:34 - INFO - Loss value: 17.06846046447754
+2025-10-18 20:08:36 - INFO - Predictions stats: min=-7.408070, max=83.362099, mean=5.748490
+2025-10-18 20:08:36 - INFO - Loss value: 15.920293807983398
+2025-10-18 20:08:37 - INFO - Predictions stats: min=-7.498110, max=85.133049, mean=5.775346
+2025-10-18 20:08:37 - INFO - Loss value: 16.635313034057617
+2025-10-18 20:08:38 - INFO - Predictions stats: min=-8.505847, max=82.846519, mean=5.801628
+2025-10-18 20:08:38 - INFO - Loss value: 16.602224349975586
+2025-10-18 20:08:40 - INFO - Predictions stats: min=-5.954742, max=86.595230, mean=5.597010
+2025-10-18 20:08:40 - INFO - Loss value: 13.881545066833496
+2025-10-18 20:08:41 - INFO - Predictions stats: min=-7.728750, max=85.965752, mean=5.734456
+2025-10-18 20:08:41 - INFO - Loss value: 13.87908935546875
+2025-10-18 20:08:43 - INFO - Predictions stats: min=-8.458141, max=82.205780, mean=5.626119
+2025-10-18 20:08:43 - INFO - Loss value: 15.084007263183594
+2025-10-18 20:08:44 - INFO - Predictions stats: min=-7.053901, max=84.851990, mean=5.537165
+2025-10-18 20:08:44 - INFO - Loss value: 14.700491905212402
+2025-10-18 20:08:46 - INFO - Predictions stats: min=-7.969566, max=85.469604, mean=5.685472
+2025-10-18 20:08:46 - INFO - Loss value: 16.87411117553711
+2025-10-18 20:08:47 - INFO - Predictions stats: min=-7.019340, max=85.604691, mean=5.443712
+2025-10-18 20:08:47 - INFO - Loss value: 16.0819149017334
+2025-10-18 20:08:55 - INFO - Epoch 109: Training Loss: 15.7203, Validation Loss: 29.2786
+2025-10-18 20:08:56 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 20:08:56 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 20:08:56 - INFO - RDM shape: (48, 48)
+
+2025-10-18 20:08:56 - INFO - First 5x5 of the RDM:
+2025-10-18 20:08:56 - INFO - [[0.         1.05438308 0.29452209 1.05976045 1.02697148]
+ [1.05438308 0.         0.86323028 0.30339163 1.06688021]
+ [0.29452209 0.86323028 0.         0.96392324 0.93674932]
+ [1.05976045 0.30339163 0.96392324 0.         1.16569203]
+ [1.02697148 1.06688021 0.93674932 1.16569203 0.        ]]
+2025-10-18 20:08:56 - INFO - 
+
+2025-10-18 20:08:56 - INFO - First 5x5 of the reference RDM:
+2025-10-18 20:08:56 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 20:08:56 - INFO - 
+
+2025-10-18 20:08:56 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 20:08:56 - INFO - First 5 model rdm values: [1.05438308 0.29452209 1.05976045 1.02697148 1.05937573]
+
+2025-10-18 20:08:56 - INFO - Behavioral RSA Correlation & p-value: 0.7539, 0.0000
+2025-10-18 20:08:56 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 20:08:56 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:08:56 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:08:56 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:08:56 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 20:08:56 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:08:56 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:08:56 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:08:56 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 20:08:56 - INFO -   m: shape torch.Size([768])
+2025-10-18 20:08:56 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 20:08:56 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 20:08:57 - INFO - DoRA parameters saved for epoch 109
+2025-10-18 20:08:57 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch109_random_states.pth
+2025-10-18 20:08:58 - INFO - Predictions stats: min=-6.255628, max=83.716751, mean=5.858805
+2025-10-18 20:08:58 - INFO - Loss value: 16.455352783203125
+2025-10-18 20:09:00 - INFO - Predictions stats: min=-8.150880, max=83.664360, mean=5.738331
+2025-10-18 20:09:00 - INFO - Loss value: 16.29427146911621
+2025-10-18 20:09:01 - INFO - Predictions stats: min=-9.523815, max=82.565643, mean=5.653023
+2025-10-18 20:09:01 - INFO - Loss value: 15.242633819580078
+2025-10-18 20:09:02 - INFO - Predictions stats: min=-9.377565, max=77.928108, mean=5.744581
+2025-10-18 20:09:02 - INFO - Loss value: 15.494937896728516
+2025-10-18 20:09:04 - INFO - Predictions stats: min=-5.786530, max=84.052277, mean=5.616446
+2025-10-18 20:09:04 - INFO - Loss value: 15.335103988647461
+2025-10-18 20:09:05 - INFO - Predictions stats: min=-6.555190, max=84.633636, mean=5.723058
+2025-10-18 20:09:05 - INFO - Loss value: 14.962477684020996
+2025-10-18 20:09:07 - INFO - Predictions stats: min=-6.936212, max=85.153580, mean=5.528750
+2025-10-18 20:09:07 - INFO - Loss value: 14.740325927734375
+2025-10-18 20:09:08 - INFO - Predictions stats: min=-7.456355, max=85.427391, mean=5.791143
+2025-10-18 20:09:08 - INFO - Loss value: 16.74408721923828
+2025-10-18 20:09:10 - INFO - Predictions stats: min=-7.269052, max=83.602020, mean=5.559427
+2025-10-18 20:09:10 - INFO - Loss value: 15.892991065979004
+2025-10-18 20:09:11 - INFO - Predictions stats: min=-9.275929, max=84.908394, mean=5.732900
+2025-10-18 20:09:11 - INFO - Loss value: 15.520255088806152
+2025-10-18 20:09:13 - INFO - Predictions stats: min=-7.572442, max=86.214462, mean=5.595926
+2025-10-18 20:09:13 - INFO - Loss value: 14.276230812072754
+2025-10-18 20:09:14 - INFO - Predictions stats: min=-7.254176, max=84.288475, mean=5.787641
+2025-10-18 20:09:14 - INFO - Loss value: 14.927095413208008
+2025-10-18 20:09:16 - INFO - Predictions stats: min=-7.469262, max=85.150955, mean=5.632717
+2025-10-18 20:09:16 - INFO - Loss value: 16.548629760742188
+2025-10-18 20:09:17 - INFO - Predictions stats: min=-8.733663, max=86.981972, mean=5.481653
+2025-10-18 20:09:17 - INFO - Loss value: 15.381304740905762
+2025-10-18 20:09:19 - INFO - Predictions stats: min=-8.452288, max=86.094627, mean=5.778033
+2025-10-18 20:09:19 - INFO - Loss value: 14.841792106628418
+2025-10-18 20:09:20 - INFO - Predictions stats: min=-5.762854, max=85.653946, mean=5.770936
+2025-10-18 20:09:20 - INFO - Loss value: 14.754251480102539
+2025-10-18 20:09:22 - INFO - Predictions stats: min=-8.691671, max=84.445137, mean=5.747855
+2025-10-18 20:09:22 - INFO - Loss value: 14.803535461425781
+2025-10-18 20:09:23 - INFO - Predictions stats: min=-5.883417, max=82.501732, mean=5.652369
+2025-10-18 20:09:23 - INFO - Loss value: 16.256366729736328
+2025-10-18 20:09:25 - INFO - Predictions stats: min=-8.377047, max=81.918617, mean=5.682456
+2025-10-18 20:09:25 - INFO - Loss value: 16.922048568725586
+2025-10-18 20:09:26 - INFO - Predictions stats: min=-7.346542, max=83.163521, mean=5.613815
+2025-10-18 20:09:26 - INFO - Loss value: 14.87425708770752
+2025-10-18 20:09:28 - INFO - Predictions stats: min=-7.178598, max=86.907738, mean=5.732193
+2025-10-18 20:09:28 - INFO - Loss value: 16.61863136291504
+2025-10-18 20:09:29 - INFO - Predictions stats: min=-7.339353, max=82.197632, mean=5.732159
+2025-10-18 20:09:29 - INFO - Loss value: 16.262042999267578
+2025-10-18 20:09:30 - INFO - Predictions stats: min=-7.171884, max=82.990150, mean=5.575513
+2025-10-18 20:09:30 - INFO - Loss value: 15.505171775817871
+2025-10-18 20:09:38 - INFO - Epoch 110: Training Loss: 15.5954, Validation Loss: 29.3106
+2025-10-18 20:09:39 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 20:09:39 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 20:09:39 - INFO - RDM shape: (48, 48)
+
+2025-10-18 20:09:39 - INFO - First 5x5 of the RDM:
+2025-10-18 20:09:39 - INFO - [[0.         1.05705815 0.29007539 1.05917166 1.02347306]
+ [1.05705815 0.         0.87156639 0.30549617 1.08076811]
+ [0.29007539 0.87156639 0.         0.96520384 0.93877251]
+ [1.05917166 0.30549617 0.96520384 0.         1.17535325]
+ [1.02347306 1.08076811 0.93877251 1.17535325 0.        ]]
+2025-10-18 20:09:39 - INFO - 
+
+2025-10-18 20:09:39 - INFO - First 5x5 of the reference RDM:
+2025-10-18 20:09:39 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 20:09:39 - INFO - 
+
+2025-10-18 20:09:39 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 20:09:39 - INFO - First 5 model rdm values: [1.05705815 0.29007539 1.05917166 1.02347306 1.06012858]
+
+2025-10-18 20:09:39 - INFO - Behavioral RSA Correlation & p-value: 0.7488, 0.0000
+2025-10-18 20:09:40 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 20:09:40 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:09:40 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:09:40 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:09:40 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 20:09:40 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:09:40 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:09:40 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:09:40 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 20:09:40 - INFO -   m: shape torch.Size([768])
+2025-10-18 20:09:40 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 20:09:40 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 20:09:40 - INFO - DoRA parameters saved for epoch 110
+2025-10-18 20:09:40 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch110_random_states.pth
+2025-10-18 20:09:42 - INFO - Predictions stats: min=-7.130826, max=85.037766, mean=5.805947
+2025-10-18 20:09:42 - INFO - Loss value: 14.977835655212402
+2025-10-18 20:09:43 - INFO - Predictions stats: min=-8.490200, max=82.734505, mean=5.476240
+2025-10-18 20:09:43 - INFO - Loss value: 15.81264877319336
+2025-10-18 20:09:45 - INFO - Predictions stats: min=-6.409685, max=83.832321, mean=5.530097
+2025-10-18 20:09:45 - INFO - Loss value: 15.467299461364746
+2025-10-18 20:09:46 - INFO - Predictions stats: min=-8.400688, max=83.113564, mean=5.797701
+2025-10-18 20:09:46 - INFO - Loss value: 15.236091613769531
+2025-10-18 20:09:48 - INFO - Predictions stats: min=-6.114940, max=84.627975, mean=5.578843
+2025-10-18 20:09:48 - INFO - Loss value: 15.300365447998047
+2025-10-18 20:09:49 - INFO - Predictions stats: min=-6.104327, max=86.361397, mean=5.639588
+2025-10-18 20:09:49 - INFO - Loss value: 16.411865234375
+2025-10-18 20:09:51 - INFO - Predictions stats: min=-6.568977, max=86.243652, mean=5.690835
+2025-10-18 20:09:51 - INFO - Loss value: 15.91685962677002
+2025-10-18 20:09:52 - INFO - Predictions stats: min=-8.242410, max=83.452621, mean=5.720282
+2025-10-18 20:09:52 - INFO - Loss value: 14.363005638122559
+2025-10-18 20:09:53 - INFO - Predictions stats: min=-8.796424, max=85.124603, mean=5.700233
+2025-10-18 20:09:53 - INFO - Loss value: 15.310619354248047
+2025-10-18 20:09:55 - INFO - Predictions stats: min=-7.490656, max=85.931068, mean=5.669079
+2025-10-18 20:09:55 - INFO - Loss value: 15.771751403808594
+2025-10-18 20:09:56 - INFO - Predictions stats: min=-7.293316, max=84.296265, mean=5.763961
+2025-10-18 20:09:56 - INFO - Loss value: 14.759349822998047
+2025-10-18 20:09:58 - INFO - Predictions stats: min=-7.845271, max=85.820198, mean=5.673088
+2025-10-18 20:09:58 - INFO - Loss value: 14.950726509094238
+2025-10-18 20:09:59 - INFO - Predictions stats: min=-8.860991, max=83.675636, mean=5.403273
+2025-10-18 20:09:59 - INFO - Loss value: 13.82658576965332
+2025-10-18 20:10:01 - INFO - Predictions stats: min=-6.050222, max=87.022713, mean=5.533607
+2025-10-18 20:10:01 - INFO - Loss value: 15.44906234741211
+2025-10-18 20:10:02 - INFO - Predictions stats: min=-7.388078, max=87.087967, mean=5.642057
+2025-10-18 20:10:02 - INFO - Loss value: 14.41844654083252
+2025-10-18 20:10:04 - INFO - Predictions stats: min=-6.525277, max=82.723366, mean=5.798471
+2025-10-18 20:10:04 - INFO - Loss value: 16.545263290405273
+2025-10-18 20:10:05 - INFO - Predictions stats: min=-8.458218, max=84.305687, mean=5.889572
+2025-10-18 20:10:05 - INFO - Loss value: 15.687922477722168
+2025-10-18 20:10:07 - INFO - Predictions stats: min=-9.276804, max=83.715233, mean=5.948798
+2025-10-18 20:10:07 - INFO - Loss value: 17.576671600341797
+2025-10-18 20:10:08 - INFO - Predictions stats: min=-8.766980, max=86.886848, mean=5.794115
+2025-10-18 20:10:08 - INFO - Loss value: 15.76683521270752
+2025-10-18 20:10:10 - INFO - Predictions stats: min=-6.548797, max=83.620255, mean=5.791708
+2025-10-18 20:10:10 - INFO - Loss value: 14.626463890075684
+2025-10-18 20:10:11 - INFO - Predictions stats: min=-6.672493, max=80.824829, mean=5.720024
+2025-10-18 20:10:11 - INFO - Loss value: 17.433183670043945
+2025-10-18 20:10:12 - INFO - Predictions stats: min=-8.719687, max=84.648552, mean=5.640822
+2025-10-18 20:10:12 - INFO - Loss value: 15.332967758178711
+2025-10-18 20:10:13 - INFO - Predictions stats: min=-7.386730, max=84.038750, mean=5.480839
+2025-10-18 20:10:13 - INFO - Loss value: 14.213774681091309
+2025-10-18 20:10:21 - INFO - Epoch 111: Training Loss: 15.4654, Validation Loss: 29.3274
+2025-10-18 20:10:23 - INFO - First 10 image names: ['pizza_01b.jpg', 'beaver_01b.jpg', 'macadamia_01b.jpg', 'tarantula_01b.jpg', 'clothes_01b.jpg']
+2025-10-18 20:10:23 - INFO - Embedding matrix shape: (48, 66)
+
+2025-10-18 20:10:23 - INFO - RDM shape: (48, 48)
+
+2025-10-18 20:10:23 - INFO - First 5x5 of the RDM:
+2025-10-18 20:10:23 - INFO - [[0.         1.06525023 0.29542028 1.06862364 1.04304501]
+ [1.06525023 0.         0.87127609 0.30151634 1.08599683]
+ [0.29542028 0.87127609 0.         0.96577341 0.95634798]
+ [1.06862364 0.30151634 0.96577341 0.         1.17751335]
+ [1.04304501 1.08599683 0.95634798 1.17751335 0.        ]]
+2025-10-18 20:10:23 - INFO - 
+
+2025-10-18 20:10:23 - INFO - First 5x5 of the reference RDM:
+2025-10-18 20:10:23 - INFO - [[0.         0.83076923 0.14925373 0.75373134 0.83088235]
+ [0.83076923 0.         0.68181818 0.02380952 0.89814815]
+ [0.14925373 0.68181818 0.         0.66363636 0.88983051]
+ [0.75373134 0.02380952 0.66363636 0.         0.95762712]
+ [0.83088235 0.89814815 0.88983051 0.95762712 0.        ]]
+2025-10-18 20:10:23 - INFO - 
+
+2025-10-18 20:10:23 - INFO - First 5 reference rdm values: [0.83076923 0.14925373 0.75373134 0.83088235 0.90151515]
+
+2025-10-18 20:10:23 - INFO - First 5 model rdm values: [1.06525023 0.29542028 1.06862364 1.04304501 1.06690165]
+
+2025-10-18 20:10:23 - INFO - Behavioral RSA Correlation & p-value: 0.7479, 0.0000
+2025-10-18 20:10:23 - INFO - 
+visual_resblock_22_attn parameter shapes:
+2025-10-18 20:10:23 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:10:23 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:10:23 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:10:23 - INFO - 
+visual_resblock_23_attn parameter shapes:
+2025-10-18 20:10:23 - INFO -   m: shape torch.Size([1024])
+2025-10-18 20:10:23 - INFO -   delta_D_A: shape torch.Size([32, 1024])
+2025-10-18 20:10:23 - INFO -   delta_D_B: shape torch.Size([1024, 32])
+2025-10-18 20:10:23 - INFO - 
+transformer_resblock_11_attn parameter shapes:
+2025-10-18 20:10:23 - INFO -   m: shape torch.Size([768])
+2025-10-18 20:10:23 - INFO -   delta_D_A: shape torch.Size([32, 768])
+2025-10-18 20:10:23 - INFO -   delta_D_B: shape torch.Size([768, 32])
+2025-10-18 20:10:23 - INFO - DoRA parameters saved for epoch 111
+2025-10-18 20:10:23 - INFO - Random states saved: /home/wallacelab/teba/multimodal_brain_inspired/marren/temporal_dynamics_of_human_alignment/clip_hba_behavior_loops/20251016_125025/training_run93/random_states_run93/epoch111_random_states.pth
+2025-10-18 20:10:23 - INFO - 
+
+*********************************
+2025-10-18 20:10:23 - INFO - Early stopping triggered at epoch 111
+2025-10-18 20:10:23 - INFO - *********************************
+
+
