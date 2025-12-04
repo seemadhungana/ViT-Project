@@ -182,10 +182,7 @@ ViT-Project/
 │   └── functions/
 │       ├── cvpr_train_behavior_things_pipeline_baseline.py
 │       └── spose_dimensions.py         # 66D semantic dimension definitions
-├── Data/                               # Datasets and results
-│   ├── Things1854/                     # THINGS dataset images
-│   ├── spose_embedding66d_rescaled_*.csv
-│   ├── RDM48_triplet.mat              # Human behavioral RDM
+├── Data/                               # Data and results
 │   ├── vit_results/
 │   │   └── rsa_results_final.csv      # ViT baseline RSA scores
 │   └── clip_results/
@@ -287,6 +284,13 @@ for perturb_epoch in range(1, 99):
     4. Resume normal training for remaining epochs
     5. Measure Δ_loss and Δ_alignment relative to baseline at perturbation epoch
 ```
+**Figure 3a: Single-Epoch Perturbation Effects on Test Loss**
+
+![Single-Epoch Sweep Loss](Figures/fig3%20(Single%20Sweep%20Perturbation%20Experiments)/fig3a.png)
+
+**Figure 3b: Single-Epoch Perturbation Effects on Behavioral Alignment**
+
+![Single-Epoch Sweep Alignment](Figures/fig3%20(Single%20Sweep%20Perturbation%20Experiments)/fig3b.png)
 
 **Key Findings (Figure 3):**
 
@@ -316,13 +320,7 @@ for perturb_epoch in range(1, 99):
 
 **Results:** See [Data/clip_results/single_sweep_experiments/](Data/clip_results/single_sweep_experiments/) (90+ training runs)
 
-**Figure 3a: Single-Epoch Perturbation Effects on Test Loss**
 
-![Single-Epoch Sweep Loss](Figures/fig3%20(Single%20Sweep%20Perturbation%20Experiments)/fig3a.png)
-
-**Figure 3b: Single-Epoch Perturbation Effects on Behavioral Alignment**
-
-![Single-Epoch Sweep Alignment](Figures/fig3%20(Single%20Sweep%20Perturbation%20Experiments)/fig3b.png)
 
 #### 4. Variable-Length Perturbation Recovery ([Training/clip_behavioral_finetuning/length_experiments/clip_train_behavior_lengths.py](Training/clip_behavioral_finetuning/length_experiments/clip_train_behavior_lengths.py))
 
@@ -635,12 +633,6 @@ This project uses the following licensed components:
 5. **Human Oversight**: Models are research prototypes—require expert supervision if applied
 6. **Reproducibility**: Use provided random seeds, checkpoints, and configurations for replication
 
-#### Transparency & Openness
-
-- All training configurations, hyperparameters, and perturbation parameters documented
-- Full experimental logs and results provided in `Data/` directories
-- Limitations explicitly stated—no overclaiming of capabilities
-
 #### Broader Impacts
 
 **Positive Impacts:**
@@ -827,7 +819,6 @@ This research makes several important contributions to understanding human-AI al
 **Discovery**: Behavioral alignment with human perception emerges through **distinct temporal phases** during training, separate from task performance optimization.
 
 - **Early training (epochs 1-10)**: High plasticity for alignment—perturbations can *enhance* behavioral similarity to humans
-- **Middle training (epochs 10-60)**: Transition period—alignment solidifies while task loss continues improving
 - **Late training (epochs 60+)**: Low plasticity—perturbations severely degrade alignment, suggesting representations have "locked in"
 
 **Significance**: This parallels biological critical periods in visual cortex development (Hubel & Wiesel, 1970) and extends machine learning critical period research (Achille et al., 2019) to cognitive alignment—a fundamentally new dimension.
@@ -909,9 +900,6 @@ Robustness to perturbations is **property-specific**:
 
 #### Connections to Broader Research
 
-**Grokking and Phase Transitions:**
-Our findings parallel recent work on delayed generalization (Power et al., 2022) and phase transitions in learning (Nanda et al., 2023)—sharp transitions in representational structure occur during training.
-
 **Mechanistic Interpretability:**
 The perturbation framework provides a **causal intervention method** for understanding when and how specific representations form, complementing activation-based interpretability methods.
 
@@ -943,12 +931,6 @@ Understanding temporal dynamics of alignment informs:
 - **Cross-cultural validation**: Collect behavioral data from non-WEIRD populations, measure alignment
 - **Other cognitive tasks**: Extend to object recognition time courses, visual search, scene understanding
 
-**4. Perturbation Diversity**
-
-- **Gradient-based perturbations**: Test adversarial perturbations vs. random noise
-- **Architectural perturbations**: Dropout, layer freezing, pruning at different training stages
-- **Data perturbations**: Curriculum order, data subset removal, class imbalance
-
 #### Longer-Term Research Directions
 
 **1. Temporally-Informed Training**
@@ -971,19 +953,6 @@ Extend to CLIP's full vision-language capabilities:
 - Can models learn new alignments without forgetting old ones?
 - Critical periods in continual learning scenarios
 
-**4. Biological Validation**
-
-Collaborate with neuroscientists to:
-- Compare model critical periods to human developmental timelines
-- Test whether human visual cortex shows similar recovery dynamics from disruption
-- Use model predictions to design neuroscience experiments
-
-**5. Theoretical Foundations**
-
-Develop formal models of alignment dynamics:
-- Loss landscape analysis around critical periods
-- Information-theoretic characterization of plasticity windows
-- Predictive theories for when critical periods occur
 
 ### Reflections on Methodology
 
@@ -1358,9 +1327,6 @@ ViT-Project/
 │   ├── clip_behavioral_finetuning/       # CLIP-HBA experiments
 │   └── functions/                        # Shared utilities
 ├── Data/                                 # Datasets and results
-│   ├── Things1854/                       # THINGS images
-│   ├── *.csv                             # SPOSEd embeddings
-│   ├── RDM48_triplet.mat                 # Behavioral RDM
 │   ├── vit_results/                      # ViT training logs
 │   └── clip_results/                     # CLIP-HBA results
 └── Figures/                              # Analysis notebooks
