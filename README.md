@@ -164,7 +164,6 @@ The project bridges **computer vision**, **cognitive neuroscience**, and **devel
 - **CLIP**: MIT License (OpenAI)
 - **TIMM**: Apache License 2.0
 - **THINGS Dataset**: CC BY 4.0
-- **Natural Object Dataset (fMRI)**: CC0 1.0 Universal
 
 ### Ethical Considerations
 
@@ -394,11 +393,6 @@ python clip_train_behavior_lengths.py \
 - **RDM**: 48×48 representational dissimilarity matrix from human triplet odd-one-out task
 - **Full dimension list**: See [Training/functions/spose_dimensions.py](Training/functions/spose_dimensions.py)
 
-**Natural Object Dataset (fMRI)**:
-- **Modality**: fMRI BOLD responses to naturalistic objects
-- **ROIs**: V1, V2, V3, V4, LO1, LO2, LO3, FFC, PIT (ventral visual cortex)
-- **Usage**: Measure neural alignment (Spearman ρ between model RDM and fMRI RDM)
-
 **Citation**:
 ```bibtex
 @article{hebart2020revealing,
@@ -433,6 +427,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - **THINGS Initiative** for behavioral dataset and SPOSEd embeddings
 - **OpenAI** for CLIP pretrained models
 - **TIMM Contributors** for ViT implementations
-- **Natural Object Dataset** for fMRI data
 - **Course Instructors** for guidance on transformer architectures and research methods
 - **Achille, Kleinman, & Soatto** for foundational work on critical periods in neural networks
