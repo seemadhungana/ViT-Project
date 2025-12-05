@@ -111,10 +111,6 @@ The project bridges **computer vision**, **cognitive neuroscience**, and **devel
 - **Late epochs (60-98)**: Perturbations **degrade** alignment (Δ RSA < 0)
 - Loss impact is more uniform across epochs than alignment impact
 
-**ViT**:
-- **No reversal pattern**: Perturbations consistently degrade alignment regardless of timing
-- Suggests alignment enhancement from early perturbations is specific to fine-tuning regime
-
 **Interpretation**: Alignment and accuracy have different critical periods in CLIP-HBA. ViT's uniform degradation indicates standard supervised learning lacks the temporal asymmetry seen in behavioral fine-tuning.
 
 #### Figure 4: Perturbation Recovery Dynamics
