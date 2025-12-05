@@ -343,11 +343,6 @@ pip install torch torchvision timm numpy pandas scipy scikit-learn matplotlib se
 pip install open_clip_torch
 ```
 
-**Download Data**:
-- THINGS images → Data/Things1854/
-- SPOSEd embeddings → Data/
-- Behavioral RDM included in repository
-
 ### Running Experiments
 
 **Baseline CLIP-HBA**:
