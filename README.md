@@ -16,13 +16,6 @@ Computer vision research has increasingly focused on guiding deep neural network
 
 We introduce **perturbations in the target embeddings** of a CLIP behavioral-alignment fine-tuning pipeline (CLIP-HBA-Behavior) and baseline **ViT models trained on ImageNet**, substituting randomly-generated targets for ground-truth behavioral targets at specific epochs and for variable durations.
 
-### Key Findings
-
-- **CLIP-HBA exhibits temporal asymmetry**: Short, early perturbations transiently **enhanced** human alignment, whereas late-stage perturbations caused degradation
-- **ViT shows uniform degradation**: Perturbations consistently degrade alignment regardless of timing, suggesting the reversal pattern is specific to fine-tuning, not universal to vision transformers
-- **Recovery dynamics vary by timing**: Models recovered faster from late-training perturbations; epochs 6-10 represent a critical vulnerability window where some perturbations caused permanent damage
-- **Alignment and accuracy follow distinct temporal dynamics**, suggesting they arise through partially independent mechanisms
-
 ---
 
 ## Methodology
@@ -127,33 +120,12 @@ The project bridges **computer vision**, **cognitive neuroscience**, and **devel
 
 ## Assessment & Evaluation
 
-### Model Architectures
-
-**CLIP-HBA-Behavior**:
-- Backbone: CLIP-ViT-L/14 (pretrained on 400M image-text pairs)
-- Vision Encoder: 24 transformer blocks, 1024-dim embeddings, 14×14 patches
-- Adaptation: DoRA (~2.5M trainable parameters)
-- Output: 66D behavioral embedding (SPOSEd space)
-
-**ViT-Base**:
-- 12 transformer encoder layers, 768-dim embeddings
-- 16×16 patches, 224×224 input
-- 86M parameters
-- Output: 1000-class ImageNet classification
-
 ### Intended Uses
 
 **Appropriate**:
 - Research on human-AI alignment and critical periods in neural networks
 - Benchmarking representation quality beyond classification accuracy
 - Educational demonstrations of training dynamics
-
-### Licenses
-
-- **Code**: MIT License (see end of README)
-- **CLIP**: MIT License (OpenAI)
-- **TIMM**: Apache License 2.0
-- **THINGS Dataset**: CC BY 4.0
 
 ### Ethical Considerations
 
@@ -167,6 +139,13 @@ The project bridges **computer vision**, **cognitive neuroscience**, and **devel
 - Behavioral alignment is dataset-specific
 - Models learn to align with human biases encoded in similarity judgments
 
+### Licenses
+
+- **Code**: MIT License (see end of README)
+- **CLIP**: MIT License (OpenAI)
+- **TIMM**: Apache License 2.0
+- **THINGS Dataset**: CC BY 4.0
+- 
 ---
 
 ## Critical Analysis
@@ -194,12 +173,6 @@ CLIP-HBA's early enhancement pattern is **not universal**:
 - ViT shows consistent degradation regardless of perturbation timing
 - Suggests the reversal pattern is specific to fine-tuning regime
 - Different training objectives yield different temporal dynamics
-
-**4. Recovery Dynamics Reveal Loss Landscape Structure**
-
-- Late training occupies flatter, more stable regions (fast recovery)
-- Early/middle training explores narrow valleys (slow/no recovery)
-- Epochs 6-10 represent critical vulnerability window
 
 ### Next Steps
 
