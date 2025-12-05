@@ -61,7 +61,6 @@ This project applies core transformer concepts to investigate a fundamental scie
 
 - **Vision Transformers & CLIP**: Leveraging pretrained vision-language models for cognitive alignment
 - **Parameter-Efficient Fine-Tuning**: DoRA adaptation for efficient behavioral alignment training
-- **Transfer Learning**: From contrastive pretraining to human perception fine-tuning
 - **Training Dynamics**: Temporal analysis reveals phase-like transitions in representation learning
 
 The project bridges **computer vision**, **cognitive neuroscience**, and **developmental learning theory**.
@@ -149,11 +148,6 @@ The project bridges **computer vision**, **cognitive neuroscience**, and **devel
 - Benchmarking representation quality beyond classification accuracy
 - Educational demonstrations of training dynamics
 
-**Inappropriate**:
-- Production systems (models optimized for research, not deployment)
-- Safety-critical tasks (experimental models require human oversight)
-- High-stakes decision-making without validation
-
 ### Licenses
 
 - **Code**: MIT License (see end of README)
@@ -172,17 +166,6 @@ The project bridges **computer vision**, **cognitive neuroscience**, and **devel
 - High RSA scores indicate alignment with *tested population*, not all humans
 - Behavioral alignment is dataset-specific
 - Models learn to align with human biases encoded in similarity judgments
-
-**Responsible Use**:
-- Acknowledge scope: Results specific to THINGS dataset and CLIP-HBA model
-- Recognize bias: Be explicit about demographic limitations
-- Avoid misuse: Do not use for surveillance, classification of people, or decisions affecting individuals
-- Require human oversight for any application
-
-**Potential Risks**:
-- Findings could be misinterpreted as universal (ignoring demographic specificity)
-- Emphasis on "human alignment" might neglect non-Western perspectives
-- Perturbation techniques could inform adversarial training methods
 
 ---
 
@@ -218,16 +201,6 @@ CLIP-HBA's early enhancement pattern is **not universal**:
 - Early/middle training explores narrow valleys (slow/no recovery)
 - Epochs 6-10 represent critical vulnerability window
 
-### What This Reveals
-
-**When Matters as Much as What**: The timing of learning experiences fundamentally shapes acquired representations. Implications for curriculum design, fine-tuning protocols, and data augmentation strategies.
-
-**Alignment Requires Explicit Measurement**: Task metrics are necessary but insufficient. Representation quality must be assessed through geometric similarity metrics (RSA, CKA), not just downstream performance.
-
-**Neural Networks Exhibit Developmental Structure**: Like biological systems, DNNs show phase-like transitions, critical periods, and stage-dependent recovery patterns.
-
-**Robustness is Property-Specific**: Alignment robustness and task loss robustness peak at different training stages, requiring multidimensional evaluation.
-
 ### Next Steps
 
 **Immediate Extensions**:
@@ -240,25 +213,6 @@ CLIP-HBA's early enhancement pattern is **not universal**:
 - Multimodal alignment dynamics (vision-language binding)
 - Continual learning and alignment persistence
 - Biological validation with neuroscientists
-
-### Reflections
-
-**Strengths**:
-- Rigorous experimental design (180+ controlled conditions)
-- Novel application of critical period framework to alignment
-- Multiple evaluation metrics (loss, behavioral RSA, neural RSA)
-
-**Limitations**:
-- Small test set (48 images) limits statistical power
-- Dataset specificity (THINGS, 1,806 images)
-- Single model family (CLIP-ViT)—unclear if findings generalize to other architectures
-- WEIRD population bias in behavioral data
-
-**Key Lessons**:
-- Early training matters immensely—small changes have lasting effects
-- Multiple metrics essential—loss alone would miss alignment improvements
-- Reproducibility infrastructure vital (random states, checkpoints)
-- Interdisciplinary framing reveals phenomena invisible to standard ML evaluation
 
 ---
 
